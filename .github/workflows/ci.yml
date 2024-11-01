@@ -1,5 +1,3 @@
-name: Build and Push Docker Image Without Buildx
-
 on:
   push:
     branches:
@@ -13,28 +11,40 @@ jobs:
       contents: 'read'
       id-token: 'write'
     steps:
-      # Checkout code
+      # checkout code
       - uses: actions/checkout@v4
 
-      # Authenticate with GCP using workload identity provider
+      # authenticate with GCP with workload identity provider
       - uses: 'google-github-actions/auth@v2'
         id: auth
         name: Authenticate to GCP
         with:
-          project_id: 'elegant-weaver-435322-v8' # Update with your project ID
-          workload_identity_provider: 'projects/186852006700/locations/global/workloadIdentityPools/github/providers/my-repo' 
+          project_id: 'elegant-weaver-435322-v8' # update with your project ID
+          workload_identity_provider: 'projects/186852006700/locations/global/workloadIdentityPools/github/providers/github-actions-provider' # update with your Workload Identity Pool
 
-      # Configure Docker to use Google Artifact Registry
+      # configure/login with docker
       - name: gcloud Configure Docker
-        run: |
-          gcloud auth configure-docker us-east1-docker.pkg.dev
+        run: gcloud auth configure-docker us-east1-docker.pkg.dev
 
-      # Build and push the Docker image using regular Docker commands
-      - name: Build and Push Without Buildx
-        run: |
-          docker build -t us-east1-docker.pkg.dev/elegant-weaver-435322-v8/artifact-repo/haydenw59/cs1660-assignment3 .
-          docker push us-east1-docker.pkg.dev/elegant-weaver-435322-v8/artifact-repo/haydenw59/cs1660-assignment3
+      # setup docker buildx
+      - name: Setup docker buildx
+        uses: docker/setup-buildx-action@v3
+        with:
+          platforms: linux/amd64,linux/arm64
 
+      - name: Build and Push
+        uses: docker/build-push-action@v6
+        with:
+          context: ./
+          file: ./Dockerfile
+          push: true
+          tags: us-east1-docker.pkg.dev/elegant-weaver-435322-v8/artifact-repo/node-demo:latest
 
+# @note: you can use regular docker commands instead of the shared action
+#      - name: Build and Push Without Buildx
+#        run: |
+#          docker build -t [GCP REGION].pkg.dev/[PROJECT ID]/[REPO NAME]/[IMAGE NAME]:[TAG] .
+#          docker push [GCP REGION].pkg.dev/[PROJECT ID]/[REPO NAME]/[IMAGE NAME]:[TAG]
+#          --> us-central1.pkg.dev/cc-fall2024/dansc0de/node-demo:v1 <--
 
 
