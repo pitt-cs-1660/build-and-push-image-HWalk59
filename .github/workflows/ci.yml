@@ -1,3 +1,5 @@
+name: Build and Push Docker Image Without Buildx
+
 on:
   push:
     branches:
@@ -11,33 +13,25 @@ jobs:
       contents: 'read'
       id-token: 'write'
     steps:
-      # checkout code
+      # Checkout code
       - uses: actions/checkout@v4
 
-      # authenticate with GCP with workload identity provider
+      # Authenticate with GCP using workload identity provider
       - uses: 'google-github-actions/auth@v2'
         id: auth
         name: Authenticate to GCP
         with:
-          project_id: 'elegant-weaver-435322-v8' # update with your project ID
+          project_id: 'elegant-weaver-435322-v8' # Update with your project ID
           workload_identity_provider: 'projects/186852006700/locations/global/workloadIdentityPools/github/providers/my-repo' 
 
-      # configure/login with docker
+      # Configure Docker to use Google Artifact Registry
       - name: gcloud Configure Docker
         run: gcloud auth configure-docker us-east1-docker.pkg.dev
 
-
-      # setup docker buildx
-      - name: Setup docker buildx
-        uses: docker/setup-buildx-action@v3
-        with:
-          platforms: linux/amd64,linux/arm64
-
-      - name: Build and Push
-        uses: docker/build-push-action@v6
-        with:
-          context: ./
-          file: ./Dockerfile
-          push: true
-          tags: us-east1-docker.pkg.dev/elegant-weaver-435322-v8/artifact-repo/cs1660-assignment3:latest
-
+      # Build and push the Docker image using regular Docker commands
+      - name: Build and Push Without Buildx
+        run: |
+          # Build the Docker image
+          docker build -t us-east1-docker.pkg.dev/elegant-weaver-435322-v8/artifact-repo/cs1660-assignment3:latest .
+          # Push the Docker image to the registry
+          docker push us-east1-docker.pkg.dev/elegant-weaver-435322-v8/artifact-repo/cs1660-assignment3:latest
