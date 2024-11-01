@@ -31,7 +31,9 @@ jobs:
       # Build and push the Docker image using regular Docker commands
       - name: Build and Push Without Buildx
         run: |
-          # Build the Docker image
           docker build -t us-east1-docker.pkg.dev/elegant-weaver-435322-v8/artifact-repo/cs1660-assignment3:latest .
-          # Push the Docker image to the registry
           docker push us-east1-docker.pkg.dev/elegant-weaver-435322-v8/artifact-repo/cs1660-assignment3:latest
+
+
+
+
