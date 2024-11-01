@@ -40,3 +40,4 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: us-east1-docker.pkg.dev/elegant-weaver-435322-v8/artifact-repo/cs1660-assignment3:latest
+
