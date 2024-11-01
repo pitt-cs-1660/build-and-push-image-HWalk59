@@ -19,12 +19,13 @@ jobs:
         id: auth
         name: Authenticate to GCP
         with:
-          project_id: 'my-project' # update with your project ID
+          project_id: 'elegant-weaver-435322-v8' # update with your project ID
           workload_identity_provider: 'projects/186852006700/locations/global/workloadIdentityPools/github/providers/my-repo' 
 
       # configure/login with docker
       - name: gcloud Configure Docker
         run: gcloud auth configure-docker us-east1-docker.pkg.dev
+
 
       # setup docker buildx
       - name: Setup docker buildx
