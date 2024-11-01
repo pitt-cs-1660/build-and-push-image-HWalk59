@@ -1,0 +1,3847 @@
+[
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "authenticationInfo": {
+        "principalEmail": "hwalker5987@gmail.com",
+        "principalSubject": "user:hwalker5987@gmail.com"
+      },
+      "requestMetadata": {
+        "callerIp": "2601:547:1981:aac0:7007:4e8a:cb93:6024",
+        "callerSuppliedUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:131.0) Gecko/20100101 Firefox/131.0,gzip(gfe),gzip(gfe)",
+        "requestAttributes": {
+          "time": "2024-11-01T17:02:07.032840682Z",
+          "auth": {}
+        },
+        "destinationAttributes": {}
+      },
+      "serviceName": "artifactregistry.googleapis.com",
+      "methodName": "google.devtools.artifactregistry.v1.ArtifactRegistry.CreateRepository",
+      "authorizationInfo": [
+        {
+          "resource": "projects/elegant-weaver-435322-v8/locations/us-east1",
+          "permission": "artifactregistry.repositories.create",
+          "granted": true,
+          "resourceAttributes": {},
+          "permissionType": "ADMIN_WRITE"
+        }
+      ],
+      "resourceName": "projects/elegant-weaver-435322-v8/locations/us-east1",
+      "request": {
+        "repository": {
+          "format": "DOCKER",
+          "dockerConfig": {
+            "immutableTags": false
+          },
+          "cleanupPolicyDryRun": true
+        },
+        "repositoryId": "artifact-registry1",
+        "@type": "type.googleapis.com/google.devtools.artifactregistry.v1.CreateRepositoryRequest",
+        "parent": "projects/elegant-weaver-435322-v8/locations/us-east1"
+      },
+      "resourceLocation": {
+        "currentLocations": [
+          "us-east1"
+        ]
+      }
+    },
+    "insertId": "tzdv65ct4o",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "service": "artifactregistry.googleapis.com",
+        "method": "google.devtools.artifactregistry.v1.ArtifactRegistry.CreateRepository",
+        "project_id": "elegant-weaver-435322-v8"
+      }
+    },
+    "timestamp": "2024-11-01T17:02:07.024051633Z",
+    "severity": "NOTICE",
+    "logName": "projects/elegant-weaver-435322-v8/logs/cloudaudit.googleapis.com%2Factivity",
+    "operation": {
+      "id": "projects/elegant-weaver-435322-v8/locations/us-east1/operations/13896cbd-6ab3-4722-8cfc-762a0dc09eee",
+      "producer": "artifactregistry.googleapis.com",
+      "first": true
+    },
+    "receiveTimestamp": "2024-11-01T17:02:07.631602382Z"
+  },
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "status": {},
+      "authenticationInfo": {
+        "principalEmail": "service-agent-manager@system.gserviceaccount.com"
+      },
+      "requestMetadata": {
+        "callerIp": "private",
+        "requestAttributes": {},
+        "destinationAttributes": {}
+      },
+      "serviceName": "cloudresourcemanager.googleapis.com",
+      "methodName": "SetIamPolicy",
+      "authorizationInfo": [
+        {
+          "resource": "projects/elegant-weaver-435322-v8",
+          "permission": "resourcemanager.projects.setIamPolicy",
+          "granted": true,
+          "resourceAttributes": {
+            "service": "cloudresourcemanager.googleapis.com",
+            "name": "projects/elegant-weaver-435322-v8",
+            "type": "cloudresourcemanager.googleapis.com/Project"
+          },
+          "permissionType": "ADMIN_WRITE"
+        },
+        {
+          "resource": "projects/elegant-weaver-435322-v8",
+          "permission": "resourcemanager.projects.setIamPolicy",
+          "granted": true,
+          "resourceAttributes": {
+            "service": "cloudresourcemanager.googleapis.com",
+            "name": "projects/elegant-weaver-435322-v8",
+            "type": "cloudresourcemanager.googleapis.com/Project"
+          },
+          "permissionType": "ADMIN_WRITE"
+        }
+      ],
+      "resourceName": "projects/elegant-weaver-435322-v8",
+      "serviceData": {
+        "@type": "type.googleapis.com/google.iam.v1.logging.AuditData",
+        "policyDelta": {
+          "bindingDeltas": [
+            {
+              "action": "ADD",
+              "role": "roles/artifactregistry.serviceAgent",
+              "member": "serviceAccount:service-186852006700@gcp-sa-artifactregistry.iam.gserviceaccount.com"
+            }
+          ]
+        }
+      },
+      "request": {
+        "resource": "186852006700",
+        "@type": "type.googleapis.com/google.iam.v1.SetIamPolicyRequest",
+        "policy": {
+          "etag": "BwYh33VhSZ4=",
+          "bindings": [
+            {
+              "members": [
+                "serviceAccount:service-186852006700@compute-system.iam.gserviceaccount.com"
+              ],
+              "role": "roles/compute.serviceAgent"
+            },
+            {
+              "role": "roles/editor",
+              "members": [
+                "serviceAccount:186852006700-compute@developer.gserviceaccount.com",
+                "serviceAccount:186852006700@cloudservices.gserviceaccount.com"
+              ]
+            },
+            {
+              "role": "roles/owner",
+              "members": [
+                "user:hwalker5987@gmail.com"
+              ]
+            },
+            {
+              "role": "roles/artifactregistry.serviceAgent",
+              "members": [
+                "serviceAccountId:101217312784625802242"
+              ]
+            }
+          ]
+        }
+      },
+      "response": {
+        "@type": "type.googleapis.com/google.iam.v1.Policy",
+        "bindings": [
+          {
+            "members": [
+              "serviceAccount:service-186852006700@gcp-sa-artifactregistry.iam.gserviceaccount.com"
+            ],
+            "role": "roles/artifactregistry.serviceAgent"
+          },
+          {
+            "members": [
+              "serviceAccount:service-186852006700@compute-system.iam.gserviceaccount.com"
+            ],
+            "role": "roles/compute.serviceAgent"
+          },
+          {
+            "members": [
+              "serviceAccount:186852006700-compute@developer.gserviceaccount.com",
+              "serviceAccount:186852006700@cloudservices.gserviceaccount.com"
+            ],
+            "role": "roles/editor"
+          },
+          {
+            "members": [
+              "user:hwalker5987@gmail.com"
+            ],
+            "role": "roles/owner"
+          }
+        ],
+        "etag": "BwYl3OU6igo="
+      }
+    },
+    "insertId": "-lktp4ve2uvua",
+    "resource": {
+      "type": "project",
+      "labels": {
+        "project_id": "elegant-weaver-435322-v8"
+      }
+    },
+    "timestamp": "2024-11-01T17:02:08.562473Z",
+    "severity": "NOTICE",
+    "logName": "projects/elegant-weaver-435322-v8/logs/cloudaudit.googleapis.com%2Factivity",
+    "receiveTimestamp": "2024-11-01T17:02:09.494628837Z"
+  },
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "status": {},
+      "authenticationInfo": {
+        "principalEmail": "hwalker5987@gmail.com",
+        "principalSubject": "user:hwalker5987@gmail.com"
+      },
+      "requestMetadata": {
+        "requestAttributes": {},
+        "destinationAttributes": {}
+      },
+      "serviceName": "artifactregistry.googleapis.com",
+      "methodName": "google.devtools.artifactregistry.v1.ArtifactRegistry.CreateRepository",
+      "resourceName": "projects/elegant-weaver-435322-v8/locations/us-east1/repositories/artifact-registry1",
+      "response": {
+        "mode": "STANDARD_REPOSITORY",
+        "dockerConfig": {},
+        "@type": "type.googleapis.com/google.protobuf.Any",
+        "vulnerabilityScanningConfig": {
+          "lastEnableTime": "2024-11-01T17:02:07.051518149Z"
+        },
+        "description": "For build-and-push assignment, Cloud Computing",
+        "sbomConfig": {},
+        "format": "DOCKER",
+        "cleanupPolicyDryRun": true,
+        "name": "projects/elegant-weaver-435322-v8/locations/us-east1/repositories/artifact-registry1"
+      }
+    },
+    "insertId": "rcndc2qa",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "project_id": "elegant-weaver-435322-v8",
+        "service": "artifactregistry.googleapis.com",
+        "method": "google.devtools.artifactregistry.v1.ArtifactRegistry.CreateRepository"
+      }
+    },
+    "timestamp": "2024-11-01T17:02:16.241695729Z",
+    "severity": "NOTICE",
+    "logName": "projects/elegant-weaver-435322-v8/logs/cloudaudit.googleapis.com%2Factivity",
+    "operation": {
+      "id": "projects/elegant-weaver-435322-v8/locations/us-east1/operations/13896cbd-6ab3-4722-8cfc-762a0dc09eee",
+      "producer": "artifactregistry.googleapis.com",
+      "last": true
+    },
+    "receiveTimestamp": "2024-11-01T17:02:16.350860319Z"
+  },
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "authenticationInfo": {
+        "principalEmail": "hwalker5987@gmail.com",
+        "principalSubject": "user:hwalker5987@gmail.com"
+      },
+      "requestMetadata": {
+        "callerIp": "34.148.159.166",
+        "callerSuppliedUserAgent": "google-cloud-sdk gcloud/499.0.0 command/gcloud.iam.workload-identity-pools.create invocation-id/beb6a2df8ee2490db4db0b3f5cc08b00 environment/devshell environment-version/None client-os/LINUX client-os-ver/6.1.112 client-pltf-arch/x86_64 interactive/True from-script/False python/3.11.9 term/screen (Linux 6.1.112+),gzip(gfe)",
+        "requestAttributes": {
+          "time": "2024-11-01T17:11:28.228328228Z",
+          "auth": {}
+        },
+        "destinationAttributes": {}
+      },
+      "serviceName": "iam.googleapis.com",
+      "methodName": "google.iam.v1.WorkloadIdentityPools.CreateWorkloadIdentityPool",
+      "authorizationInfo": [
+        {
+          "resource": "projects/elegant-weaver-435322-v8/locations/global",
+          "permission": "iam.workloadIdentityPools.create",
+          "granted": true,
+          "resourceAttributes": {},
+          "permissionType": "ADMIN_WRITE"
+        }
+      ],
+      "resourceName": "projects/elegant-weaver-435322-v8/locations/global",
+      "request": {
+        "workloadIdentityPool": {
+          "disabled": false,
+          "displayName": "GitHub Actions Pool"
+        },
+        "parent": "projects/elegant-weaver-435322-v8/locations/global",
+        "workloadIdentityPoolId": "github",
+        "@type": "type.googleapis.com/google.iam.v1.CreateWorkloadIdentityPoolRequest"
+      },
+      "resourceLocation": {
+        "currentLocations": [
+          "global"
+        ]
+      }
+    },
+    "insertId": "5uomi9dbjl8",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "project_id": "elegant-weaver-435322-v8",
+        "method": "google.iam.v1.WorkloadIdentityPools.CreateWorkloadIdentityPool",
+        "service": "iam.googleapis.com"
+      }
+    },
+    "timestamp": "2024-11-01T17:11:28.217992052Z",
+    "severity": "NOTICE",
+    "logName": "projects/elegant-weaver-435322-v8/logs/cloudaudit.googleapis.com%2Factivity",
+    "operation": {
+      "id": "projects/186852006700/locations/global/workloadIdentityPools/github/operations/bigarqexss4qmehaxgso6aq000000000",
+      "producer": "iam.googleapis.com",
+      "first": true
+    },
+    "receiveTimestamp": "2024-11-01T17:11:28.811919762Z"
+  },
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "authenticationInfo": {
+        "principalEmail": "hwalker5987@gmail.com",
+        "principalSubject": "user:hwalker5987@gmail.com"
+      },
+      "requestMetadata": {
+        "requestAttributes": {},
+        "destinationAttributes": {}
+      },
+      "serviceName": "iam.googleapis.com",
+      "methodName": "google.iam.v1.WorkloadIdentityPools.CreateWorkloadIdentityPool",
+      "resourceName": "projects/elegant-weaver-435322-v8/locations/global",
+      "response": {
+        "@type": "type.googleapis.com/google.longrunning.Operation",
+        "name": "projects/186852006700/locations/global/workloadIdentityPools/github/operations/bigarqexss4qmehaxgso6aq000000000"
+      }
+    },
+    "insertId": "-r5rvktcg9n",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "method": "google.iam.v1.WorkloadIdentityPools.CreateWorkloadIdentityPool",
+        "project_id": "elegant-weaver-435322-v8",
+        "service": "iam.googleapis.com"
+      }
+    },
+    "timestamp": "2024-11-01T17:11:28.770957Z",
+    "severity": "NOTICE",
+    "logName": "projects/elegant-weaver-435322-v8/logs/cloudaudit.googleapis.com%2Factivity",
+    "operation": {
+      "id": "projects/186852006700/locations/global/workloadIdentityPools/github/operations/bigarqexss4qmehaxgso6aq000000000",
+      "producer": "iam.googleapis.com",
+      "last": true
+    },
+    "receiveTimestamp": "2024-11-01T17:11:28.867676451Z"
+  },
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "authenticationInfo": {
+        "principalEmail": "hwalker5987@gmail.com",
+        "principalSubject": "user:hwalker5987@gmail.com"
+      },
+      "requestMetadata": {
+        "callerIp": "34.148.159.166",
+        "callerSuppliedUserAgent": "google-cloud-sdk gcloud/499.0.0 command/gcloud.iam.workload-identity-pools.providers.create-oidc invocation-id/76fb49b9b2ea4b09b49ac956824c5d11 environment/devshell environment-version/None client-os/LINUX client-os-ver/6.1.112 client-pltf-arch/x86_64 interactive/True from-script/False python/3.11.9 term/screen (Linux 6.1.112+),gzip(gfe)",
+        "requestAttributes": {
+          "time": "2024-11-01T17:23:57.344908120Z",
+          "auth": {}
+        },
+        "destinationAttributes": {}
+      },
+      "serviceName": "iam.googleapis.com",
+      "methodName": "google.iam.v1.WorkloadIdentityPools.CreateWorkloadIdentityPoolProvider",
+      "authorizationInfo": [
+        {
+          "resource": "projects/elegant-weaver-435322-v8/locations/global/workloadIdentityPools/github",
+          "permission": "iam.workloadIdentityPoolProviders.create",
+          "granted": true,
+          "resourceAttributes": {},
+          "permissionType": "ADMIN_WRITE"
+        }
+      ],
+      "resourceName": "projects/elegant-weaver-435322-v8/locations/global/workloadIdentityPools/github",
+      "request": {
+        "parent": "projects/elegant-weaver-435322-v8/locations/global/workloadIdentityPools/github",
+        "workloadIdentityPoolProviderId": "my-repo",
+        "@type": "type.googleapis.com/google.iam.v1.CreateWorkloadIdentityPoolProviderRequest",
+        "workloadIdentityPoolProvider": {
+          "attributeCondition": "assertion.repository_owner == 'pitt-cs-1660'",
+          "oidc": {
+            "issuerUri": "https://token.actions.githubusercontent.com"
+          },
+          "displayName": "My GitHub repo Provider",
+          "disabled": false,
+          "attributeMapping": {
+            "attribute.repository_owner": "assertion.repository_owner",
+            "attribute.actor": "assertion.actor",
+            "attribute.repository": "assertion.repository",
+            "google.subject": "assertion.sub"
+          }
+        }
+      },
+      "resourceLocation": {
+        "currentLocations": [
+          "global"
+        ]
+      }
+    },
+    "insertId": "n1ylxfdbkz3",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "method": "google.iam.v1.WorkloadIdentityPools.CreateWorkloadIdentityPoolProvider",
+        "service": "iam.googleapis.com",
+        "project_id": "elegant-weaver-435322-v8"
+      }
+    },
+    "timestamp": "2024-11-01T17:23:57.323868527Z",
+    "severity": "NOTICE",
+    "logName": "projects/elegant-weaver-435322-v8/logs/cloudaudit.googleapis.com%2Factivity",
+    "operation": {
+      "id": "projects/186852006700/locations/global/workloadIdentityPools/github/providers/my-repo/operations/bigarlm5ss4qmeea2dyk2aq000000000",
+      "producer": "iam.googleapis.com",
+      "first": true
+    },
+    "receiveTimestamp": "2024-11-01T17:23:58.498918530Z"
+  },
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "authenticationInfo": {
+        "principalEmail": "hwalker5987@gmail.com",
+        "principalSubject": "user:hwalker5987@gmail.com"
+      },
+      "requestMetadata": {
+        "requestAttributes": {},
+        "destinationAttributes": {}
+      },
+      "serviceName": "iam.googleapis.com",
+      "methodName": "google.iam.v1.WorkloadIdentityPools.CreateWorkloadIdentityPoolProvider",
+      "resourceName": "projects/elegant-weaver-435322-v8/locations/global/workloadIdentityPools/github",
+      "response": {
+        "name": "projects/186852006700/locations/global/workloadIdentityPools/github/providers/my-repo/operations/bigarlm5ss4qmeea2dyk2aq000000000",
+        "@type": "type.googleapis.com/google.longrunning.Operation"
+      }
+    },
+    "insertId": "2ieh02c4kl",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "method": "google.iam.v1.WorkloadIdentityPools.CreateWorkloadIdentityPoolProvider",
+        "project_id": "elegant-weaver-435322-v8",
+        "service": "iam.googleapis.com"
+      }
+    },
+    "timestamp": "2024-11-01T17:23:57.634011Z",
+    "severity": "NOTICE",
+    "logName": "projects/elegant-weaver-435322-v8/logs/cloudaudit.googleapis.com%2Factivity",
+    "operation": {
+      "id": "projects/186852006700/locations/global/workloadIdentityPools/github/providers/my-repo/operations/bigarlm5ss4qmeea2dyk2aq000000000",
+      "producer": "iam.googleapis.com",
+      "last": true
+    },
+    "receiveTimestamp": "2024-11-01T17:23:57.835238636Z"
+  },
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "authenticationInfo": {
+        "principalEmail": "hwalker5987@gmail.com",
+        "principalSubject": "user:hwalker5987@gmail.com"
+      },
+      "requestMetadata": {
+        "callerIp": "34.148.159.166",
+        "callerSuppliedUserAgent": "google-cloud-sdk gcloud/499.0.0 command/gcloud.secrets.add-iam-policy-binding invocation-id/452e150fa6484ffe88415a1f71175c8f environment/devshell environment-version/None client-os/LINUX client-os-ver/6.1.112 client-pltf-arch/x86_64 interactive/True from-script/False python/3.11.9 term/screen (Linux 6.1.112+),gzip(gfe)",
+        "requestAttributes": {},
+        "destinationAttributes": {}
+      },
+      "serviceName": "serviceusage.googleapis.com",
+      "methodName": "google.api.serviceusage.v1.ServiceUsage.EnableService",
+      "authorizationInfo": [
+        {
+          "resource": "projectnumbers/186852006700/services/secretmanager.googleapis.com",
+          "permission": "serviceusage.services.enable",
+          "granted": true,
+          "resourceAttributes": {},
+          "permissionType": "ADMIN_WRITE"
+        },
+        {
+          "resource": "services/secretmanager.googleapis.com",
+          "permission": "servicemanagement.services.bind",
+          "granted": true,
+          "resourceAttributes": {},
+          "permissionType": "DATA_WRITE"
+        }
+      ],
+      "resourceName": "projects/elegant-weaver-435322-v8/services/secretmanager.googleapis.com",
+      "request": {
+        "name": "projects/elegant-weaver-435322-v8/services/secretmanager.googleapis.com",
+        "@type": "type.googleapis.com/google.api.serviceusage.v1.EnableServiceRequest"
+      }
+    },
+    "insertId": "1kd7l21dgcpl",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "service": "serviceusage.googleapis.com",
+        "method": "google.api.serviceusage.v1.ServiceUsage.EnableService",
+        "project_id": "elegant-weaver-435322-v8"
+      }
+    },
+    "timestamp": "2024-11-01T18:05:19.519948Z",
+    "severity": "NOTICE",
+    "logName": "projects/elegant-weaver-435322-v8/logs/cloudaudit.googleapis.com%2Factivity",
+    "operation": {
+      "id": "operations/acat.p2-186852006700-685c998b-3d19-4dcf-91bc-abfa0147752d",
+      "producer": "serviceusage.googleapis.com",
+      "first": true
+    },
+    "receiveTimestamp": "2024-11-01T18:05:21.556873568Z"
+  },
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "status": {},
+      "authenticationInfo": {
+        "principalEmail": "hwalker5987@gmail.com",
+        "principalSubject": "user:hwalker5987@gmail.com"
+      },
+      "requestMetadata": {
+        "callerIp": "34.148.159.166",
+        "callerSuppliedUserAgent": "google-cloud-sdk gcloud/499.0.0 command/gcloud.secrets.add-iam-policy-binding invocation-id/452e150fa6484ffe88415a1f71175c8f environment/devshell environment-version/None client-os/LINUX client-os-ver/6.1.112 client-pltf-arch/x86_64 interactive/True from-script/False python/3.11.9 term/screen (Linux 6.1.112+),gzip(gfe)",
+        "requestAttributes": {},
+        "destinationAttributes": {}
+      },
+      "serviceName": "serviceusage.googleapis.com",
+      "methodName": "google.longrunning.Operations.GetOperation",
+      "authorizationInfo": [
+        {
+          "resource": "projectnumbers/186852006700",
+          "permission": "serviceusage.services.enable",
+          "granted": true,
+          "resourceAttributes": {},
+          "permissionType": "ADMIN_WRITE"
+        },
+        {
+          "resource": "projectnumbers/186852006700/operations/-",
+          "permission": "serviceusage.operations.get",
+          "granted": true,
+          "resourceAttributes": {},
+          "permissionType": "DATA_READ"
+        },
+        {
+          "resource": "projectnumbers/186852006700",
+          "permission": "serviceusage.services.get",
+          "granted": true,
+          "resourceAttributes": {},
+          "permissionType": "DATA_READ"
+        }
+      ],
+      "resourceName": "projects/186852006700/operations/acat.p2-186852006700-685c998b-3d19-4dcf-91bc-abfa0147752d"
+    },
+    "insertId": "1kd7l21dgcpm",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "service": "serviceusage.googleapis.com",
+        "project_id": "elegant-weaver-435322-v8",
+        "method": "google.longrunning.Operations.GetOperation"
+      }
+    },
+    "timestamp": "2024-11-01T18:05:20.537584Z",
+    "severity": "NOTICE",
+    "logName": "projects/elegant-weaver-435322-v8/logs/cloudaudit.googleapis.com%2Factivity",
+    "receiveTimestamp": "2024-11-01T18:05:21.556873568Z"
+  },
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "status": {},
+      "authenticationInfo": {
+        "principalEmail": "hwalker5987@gmail.com",
+        "principalSubject": "user:hwalker5987@gmail.com"
+      },
+      "requestMetadata": {
+        "callerIp": "34.148.159.166",
+        "callerSuppliedUserAgent": "google-cloud-sdk gcloud/499.0.0 command/gcloud.secrets.add-iam-policy-binding invocation-id/452e150fa6484ffe88415a1f71175c8f environment/devshell environment-version/None client-os/LINUX client-os-ver/6.1.112 client-pltf-arch/x86_64 interactive/True from-script/False python/3.11.9 term/screen (Linux 6.1.112+),gzip(gfe)",
+        "requestAttributes": {},
+        "destinationAttributes": {}
+      },
+      "serviceName": "serviceusage.googleapis.com",
+      "methodName": "google.api.serviceusage.v1.ServiceUsage.EnableService",
+      "authorizationInfo": [
+        {
+          "resource": "projectnumbers/186852006700/services/secretmanager.googleapis.com",
+          "permission": "serviceusage.services.enable",
+          "granted": true,
+          "resourceAttributes": {},
+          "permissionType": "ADMIN_WRITE"
+        },
+        {
+          "resource": "services/secretmanager.googleapis.com",
+          "permission": "servicemanagement.services.bind",
+          "granted": true,
+          "resourceAttributes": {},
+          "permissionType": "DATA_WRITE"
+        }
+      ],
+      "resourceName": "projects/elegant-weaver-435322-v8/services/secretmanager.googleapis.com",
+      "request": {
+        "name": "projects/elegant-weaver-435322-v8/services/secretmanager.googleapis.com",
+        "@type": "type.googleapis.com/google.api.serviceusage.v1.EnableServiceRequest"
+      },
+      "response": {
+        "@type": "type.googleapis.com/google.api.serviceusage.v1.EnableServiceResponse",
+        "service": {
+          "parent": "projects/186852006700",
+          "state": "ENABLED",
+          "config": {
+            "name": "secretmanager.googleapis.com",
+            "title": "Secret Manager API"
+          },
+          "name": "projects/186852006700/services/secretmanager.googleapis.com"
+        }
+      }
+    },
+    "insertId": "auwd3jd9esg",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "project_id": "elegant-weaver-435322-v8",
+        "service": "serviceusage.googleapis.com",
+        "method": "google.api.serviceusage.v1.ServiceUsage.EnableService"
+      }
+    },
+    "timestamp": "2024-11-01T18:05:21.978832471Z",
+    "severity": "NOTICE",
+    "logName": "projects/elegant-weaver-435322-v8/logs/cloudaudit.googleapis.com%2Factivity",
+    "operation": {
+      "id": "operations/acat.p2-186852006700-685c998b-3d19-4dcf-91bc-abfa0147752d",
+      "producer": "serviceusage.googleapis.com",
+      "last": true
+    },
+    "receiveTimestamp": "2024-11-01T18:05:21.978832471Z"
+  },
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "status": {},
+      "authenticationInfo": {
+        "principalEmail": "hwalker5987@gmail.com",
+        "principalSubject": "user:hwalker5987@gmail.com"
+      },
+      "requestMetadata": {
+        "callerIp": "34.148.159.166",
+        "callerSuppliedUserAgent": "google-cloud-sdk gcloud/499.0.0 command/gcloud.secrets.add-iam-policy-binding invocation-id/452e150fa6484ffe88415a1f71175c8f environment/devshell environment-version/None client-os/LINUX client-os-ver/6.1.112 client-pltf-arch/x86_64 interactive/True from-script/False python/3.11.9 term/screen (Linux 6.1.112+),gzip(gfe)",
+        "requestAttributes": {},
+        "destinationAttributes": {}
+      },
+      "serviceName": "serviceusage.googleapis.com",
+      "methodName": "google.longrunning.Operations.GetOperation",
+      "authorizationInfo": [
+        {
+          "resource": "projectnumbers/186852006700",
+          "permission": "serviceusage.services.enable",
+          "granted": true,
+          "resourceAttributes": {},
+          "permissionType": "ADMIN_WRITE"
+        },
+        {
+          "resource": "projectnumbers/186852006700/operations/-",
+          "permission": "serviceusage.operations.get",
+          "granted": true,
+          "resourceAttributes": {},
+          "permissionType": "DATA_READ"
+        },
+        {
+          "resource": "projectnumbers/186852006700",
+          "permission": "serviceusage.services.get",
+          "granted": true,
+          "resourceAttributes": {},
+          "permissionType": "DATA_READ"
+        }
+      ],
+      "resourceName": "projects/186852006700/operations/acat.p2-186852006700-685c998b-3d19-4dcf-91bc-abfa0147752d"
+    },
+    "insertId": "9gcz8xdg7ln",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "method": "google.longrunning.Operations.GetOperation",
+        "service": "serviceusage.googleapis.com",
+        "project_id": "elegant-weaver-435322-v8"
+      }
+    },
+    "timestamp": "2024-11-01T18:05:23.208009Z",
+    "severity": "NOTICE",
+    "logName": "projects/elegant-weaver-435322-v8/logs/cloudaudit.googleapis.com%2Factivity",
+    "receiveTimestamp": "2024-11-01T18:05:23.638350964Z"
+  },
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "authenticationInfo": {
+        "principalEmail": "hwalker5987@gmail.com",
+        "principalSubject": "user:hwalker5987@gmail.com"
+      },
+      "requestMetadata": {
+        "callerIp": "34.148.159.166",
+        "callerSuppliedUserAgent": "google-cloud-sdk gcloud/499.0.0 command/gcloud.secrets.create invocation-id/938c1f2d7b4748a7baab5cf17cc2b799 environment/devshell environment-version/None client-os/LINUX client-os-ver/6.1.112 client-pltf-arch/x86_64 interactive/True from-script/False python/3.11.9 term/screen (Linux 6.1.112+),gzip(gfe)",
+        "requestAttributes": {
+          "time": "2024-11-01T18:27:27.774255580Z",
+          "auth": {}
+        },
+        "destinationAttributes": {}
+      },
+      "serviceName": "secretmanager.googleapis.com",
+      "methodName": "google.cloud.secretmanager.v1.SecretManagerService.CreateSecret",
+      "authorizationInfo": [
+        {
+          "permission": "secretmanager.secrets.create",
+          "granted": true,
+          "resourceAttributes": {
+            "service": "secretmanager.googleapis.com",
+            "name": "projects/186852006700/secrets/my-secret",
+            "type": "secretmanager.googleapis.com/Secret"
+          },
+          "permissionType": "ADMIN_WRITE"
+        }
+      ],
+      "resourceName": "projects/186852006700/secrets/my-secret",
+      "request": {
+        "secretId": "my-secret",
+        "@type": "type.googleapis.com/google.cloud.secretmanager.v1.CreateSecretRequest",
+        "parent": "projects/186852006700",
+        "secret": {
+          "replication": {
+            "automatic": {}
+          }
+        }
+      },
+      "response": {
+        "createTime": "2024-11-01T18:27:28.178997Z",
+        "replication": {
+          "automatic": {}
+        },
+        "name": "projects/186852006700/secrets/my-secret",
+        "@type": "type.googleapis.com/google.cloud.secretmanager.v1.Secret"
+      }
+    },
+    "insertId": "lpa42de1g069",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "method": "google.cloud.secretmanager.v1.SecretManagerService.CreateSecret",
+        "service": "secretmanager.googleapis.com",
+        "project_id": "elegant-weaver-435322-v8"
+      }
+    },
+    "timestamp": "2024-11-01T18:27:27.763235601Z",
+    "severity": "NOTICE",
+    "logName": "projects/elegant-weaver-435322-v8/logs/cloudaudit.googleapis.com%2Factivity",
+    "receiveTimestamp": "2024-11-01T18:27:28.242233606Z"
+  },
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "authenticationInfo": {
+        "principalEmail": "hwalker5987@gmail.com",
+        "principalSubject": "user:hwalker5987@gmail.com"
+      },
+      "requestMetadata": {
+        "callerIp": "34.148.159.166",
+        "callerSuppliedUserAgent": "google-cloud-sdk gcloud/499.0.0 command/gcloud.secrets.add-iam-policy-binding invocation-id/3b81a70ad0ff4434a93c77b22fd051a7 environment/devshell environment-version/None client-os/LINUX client-os-ver/6.1.112 client-pltf-arch/x86_64 interactive/True from-script/False python/3.11.9 term/screen (Linux 6.1.112+),gzip(gfe)",
+        "requestAttributes": {
+          "time": "2024-11-01T18:27:32.249235983Z",
+          "auth": {}
+        },
+        "destinationAttributes": {}
+      },
+      "serviceName": "secretmanager.googleapis.com",
+      "methodName": "google.cloud.secretmanager.v1.SecretManagerService.SetIamPolicy",
+      "authorizationInfo": [
+        {
+          "permission": "secretmanager.secrets.setIamPolicy",
+          "granted": true,
+          "resourceAttributes": {
+            "service": "secretmanager.googleapis.com",
+            "name": "projects/186852006700/secrets/my-secret",
+            "type": "secretmanager.googleapis.com/Secret"
+          },
+          "permissionType": "ADMIN_WRITE"
+        }
+      ],
+      "resourceName": "projects/186852006700/secrets/my-secret",
+      "request": {
+        "@type": "type.googleapis.com/google.iam.v1.SetIamPolicyRequest",
+        "policy": {
+          "etag": "ACAB",
+          "bindings": [
+            {
+              "role": "roles/secretmanager.secretAccessor",
+              "members": [
+                "principalSet://iam.googleapis.com/projects/186852006700/locations/global/workloadIdentityPools/github/attribute.repository/pitt-cs-1660/build-and-push-image-HWalk59"
+              ]
+            }
+          ]
+        },
+        "resource": "projects/186852006700/secrets/my-secret"
+      },
+      "response": {
+        "bindings": [
+          {
+            "members": [
+              "principalSet://iam.googleapis.com/projects/186852006700/locations/global/workloadIdentityPools/github/attribute.repository/pitt-cs-1660/build-and-push-image-HWalk59"
+            ],
+            "role": "roles/secretmanager.secretAccessor"
+          }
+        ],
+        "@type": "type.googleapis.com/google.iam.v1.Policy",
+        "etag": "BwYl3haW4oo="
+      }
+    },
+    "insertId": "1y976fae1jhrn",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "service": "secretmanager.googleapis.com",
+        "method": "google.cloud.secretmanager.v1.SecretManagerService.SetIamPolicy",
+        "project_id": "elegant-weaver-435322-v8"
+      }
+    },
+    "timestamp": "2024-11-01T18:27:31.809657126Z",
+    "severity": "NOTICE",
+    "logName": "projects/elegant-weaver-435322-v8/logs/cloudaudit.googleapis.com%2Factivity",
+    "receiveTimestamp": "2024-11-01T18:27:33.223742022Z"
+  },
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "status": {
+        "code": 6,
+        "message": "Secret [projects/186852006700/secrets/my-secret] already exists."
+      },
+      "authenticationInfo": {
+        "principalEmail": "hwalker5987@gmail.com",
+        "principalSubject": "user:hwalker5987@gmail.com"
+      },
+      "requestMetadata": {
+        "callerIp": "34.148.159.166",
+        "callerSuppliedUserAgent": "google-cloud-sdk gcloud/499.0.0 command/gcloud.secrets.create invocation-id/0a82c704e3a9421e875fcdf3de26d644 environment/devshell environment-version/None client-os/LINUX client-os-ver/6.1.112 client-pltf-arch/x86_64 interactive/True from-script/False python/3.11.9 term/screen (Linux 6.1.112+),gzip(gfe)",
+        "requestAttributes": {
+          "time": "2024-11-01T18:30:04.913364453Z",
+          "auth": {}
+        },
+        "destinationAttributes": {}
+      },
+      "serviceName": "secretmanager.googleapis.com",
+      "methodName": "google.cloud.secretmanager.v1.SecretManagerService.CreateSecret",
+      "authorizationInfo": [
+        {
+          "permission": "secretmanager.secrets.create",
+          "granted": true,
+          "resourceAttributes": {
+            "service": "secretmanager.googleapis.com",
+            "name": "projects/186852006700/secrets/my-secret",
+            "type": "secretmanager.googleapis.com/Secret"
+          },
+          "permissionType": "ADMIN_WRITE"
+        }
+      ],
+      "resourceName": "projects/186852006700/secrets/my-secret",
+      "request": {
+        "secret": {
+          "replication": {
+            "automatic": {}
+          }
+        },
+        "parent": "projects/elegant-weaver-435322-v8",
+        "@type": "type.googleapis.com/google.cloud.secretmanager.v1.CreateSecretRequest",
+        "secretId": "my-secret"
+      }
+    },
+    "insertId": "1fm64ohe1inqm",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "service": "secretmanager.googleapis.com",
+        "project_id": "elegant-weaver-435322-v8",
+        "method": "google.cloud.secretmanager.v1.SecretManagerService.CreateSecret"
+      }
+    },
+    "timestamp": "2024-11-01T18:30:04.900411966Z",
+    "severity": "ERROR",
+    "logName": "projects/elegant-weaver-435322-v8/logs/cloudaudit.googleapis.com%2Factivity",
+    "receiveTimestamp": "2024-11-01T18:30:06.012642407Z"
+  },
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "authenticationInfo": {
+        "principalEmail": "hwalker5987@gmail.com",
+        "principalSubject": "user:hwalker5987@gmail.com"
+      },
+      "requestMetadata": {
+        "callerIp": "34.148.159.166",
+        "callerSuppliedUserAgent": "google-cloud-sdk gcloud/499.0.0 command/gcloud.secrets.add-iam-policy-binding invocation-id/b89807e382774c768444a81226518b75 environment/devshell environment-version/None client-os/LINUX client-os-ver/6.1.112 client-pltf-arch/x86_64 interactive/True from-script/False python/3.11.9 term/screen (Linux 6.1.112+),gzip(gfe)",
+        "requestAttributes": {
+          "time": "2024-11-01T18:30:22.154903453Z",
+          "auth": {}
+        },
+        "destinationAttributes": {}
+      },
+      "serviceName": "secretmanager.googleapis.com",
+      "methodName": "google.cloud.secretmanager.v1.SecretManagerService.SetIamPolicy",
+      "authorizationInfo": [
+        {
+          "permission": "secretmanager.secrets.setIamPolicy",
+          "granted": true,
+          "resourceAttributes": {
+            "service": "secretmanager.googleapis.com",
+            "name": "projects/186852006700/secrets/my-secret",
+            "type": "secretmanager.googleapis.com/Secret"
+          },
+          "permissionType": "ADMIN_WRITE"
+        }
+      ],
+      "resourceName": "projects/186852006700/secrets/my-secret",
+      "request": {
+        "resource": "projects/186852006700/secrets/my-secret",
+        "@type": "type.googleapis.com/google.iam.v1.SetIamPolicyRequest",
+        "policy": {
+          "bindings": [
+            {
+              "role": "roles/secretmanager.secretAccessor",
+              "members": [
+                "principalSet://iam.googleapis.com/projects/186852006700/locations/global/workloadIdentityPools/github/attribute.repository/pitt-cs-1660/build-and-push-image-HWalk59"
+              ]
+            }
+          ],
+          "etag": "BwYl3haW4oo="
+        }
+      },
+      "response": {
+        "@type": "type.googleapis.com/google.iam.v1.Policy",
+        "bindings": [
+          {
+            "members": [
+              "principalSet://iam.googleapis.com/projects/186852006700/locations/global/workloadIdentityPools/github/attribute.repository/pitt-cs-1660/build-and-push-image-HWalk59"
+            ],
+            "role": "roles/secretmanager.secretAccessor"
+          }
+        ],
+        "etag": "BwYl3iC3e5k="
+      }
+    },
+    "insertId": "11hn9ege1j7y5",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "project_id": "elegant-weaver-435322-v8",
+        "method": "google.cloud.secretmanager.v1.SecretManagerService.SetIamPolicy",
+        "service": "secretmanager.googleapis.com"
+      }
+    },
+    "timestamp": "2024-11-01T18:30:21.814044391Z",
+    "severity": "NOTICE",
+    "logName": "projects/elegant-weaver-435322-v8/logs/cloudaudit.googleapis.com%2Factivity",
+    "receiveTimestamp": "2024-11-01T18:30:22.430645225Z"
+  },
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "status": {},
+      "authenticationInfo": {
+        "principalEmail": "hwalker5987@gmail.com",
+        "principalSubject": "user:hwalker5987@gmail.com"
+      },
+      "requestMetadata": {
+        "callerIp": "34.148.159.166",
+        "callerSuppliedUserAgent": "google-cloud-sdk gcloud/499.0.0 command/gcloud.projects.add-iam-policy-binding invocation-id/2289bcd80a9c4929b22574b1bc206b30 environment/devshell environment-version/None client-os/LINUX client-os-ver/6.1.112 client-pltf-arch/x86_64 interactive/True from-script/False python/3.11.9 term/screen (Linux 6.1.112+),gzip(gfe)",
+        "requestAttributes": {},
+        "destinationAttributes": {}
+      },
+      "serviceName": "cloudresourcemanager.googleapis.com",
+      "methodName": "SetIamPolicy",
+      "authorizationInfo": [
+        {
+          "resource": "projects/elegant-weaver-435322-v8",
+          "permission": "resourcemanager.projects.setIamPolicy",
+          "granted": true,
+          "resourceAttributes": {
+            "service": "cloudresourcemanager.googleapis.com",
+            "name": "projects/elegant-weaver-435322-v8",
+            "type": "cloudresourcemanager.googleapis.com/Project"
+          },
+          "permissionType": "ADMIN_WRITE"
+        },
+        {
+          "resource": "projects/elegant-weaver-435322-v8",
+          "permission": "resourcemanager.projects.setIamPolicy",
+          "granted": true,
+          "resourceAttributes": {
+            "service": "cloudresourcemanager.googleapis.com",
+            "name": "projects/elegant-weaver-435322-v8",
+            "type": "cloudresourcemanager.googleapis.com/Project"
+          },
+          "permissionType": "ADMIN_WRITE"
+        }
+      ],
+      "resourceName": "projects/elegant-weaver-435322-v8",
+      "serviceData": {
+        "@type": "type.googleapis.com/google.iam.v1.logging.AuditData",
+        "policyDelta": {
+          "bindingDeltas": [
+            {
+              "action": "ADD",
+              "role": "roles/artifactregistry.admin",
+              "member": "user:hwalker5987@gmail.com"
+            }
+          ]
+        }
+      },
+      "request": {
+        "policy": {
+          "etag": "BwYl3OU6igo=",
+          "bindings": [
+            {
+              "members": [
+                "serviceAccount:service-186852006700@gcp-sa-artifactregistry.iam.gserviceaccount.com"
+              ],
+              "role": "roles/artifactregistry.serviceAgent"
+            },
+            {
+              "members": [
+                "serviceAccount:service-186852006700@compute-system.iam.gserviceaccount.com"
+              ],
+              "role": "roles/compute.serviceAgent"
+            },
+            {
+              "members": [
+                "serviceAccount:186852006700-compute@developer.gserviceaccount.com",
+                "serviceAccount:186852006700@cloudservices.gserviceaccount.com"
+              ],
+              "role": "roles/editor"
+            },
+            {
+              "members": [
+                "user:hwalker5987@gmail.com"
+              ],
+              "role": "roles/owner"
+            },
+            {
+              "members": [
+                "user:hwalker5987@gmail.com"
+              ],
+              "role": "roles/artifactregistry.admin"
+            }
+          ]
+        },
+        "@type": "type.googleapis.com/google.iam.v1.SetIamPolicyRequest",
+        "resource": "elegant-weaver-435322-v8"
+      },
+      "response": {
+        "bindings": [
+          {
+            "members": [
+              "user:hwalker5987@gmail.com"
+            ],
+            "role": "roles/artifactregistry.admin"
+          },
+          {
+            "role": "roles/artifactregistry.serviceAgent",
+            "members": [
+              "serviceAccount:service-186852006700@gcp-sa-artifactregistry.iam.gserviceaccount.com"
+            ]
+          },
+          {
+            "members": [
+              "serviceAccount:service-186852006700@compute-system.iam.gserviceaccount.com"
+            ],
+            "role": "roles/compute.serviceAgent"
+          },
+          {
+            "members": [
+              "serviceAccount:186852006700-compute@developer.gserviceaccount.com",
+              "serviceAccount:186852006700@cloudservices.gserviceaccount.com"
+            ],
+            "role": "roles/editor"
+          },
+          {
+            "members": [
+              "user:hwalker5987@gmail.com"
+            ],
+            "role": "roles/owner"
+          }
+        ],
+        "etag": "BwYl3iUPQms=",
+        "@type": "type.googleapis.com/google.iam.v1.Policy"
+      }
+    },
+    "insertId": "sczotre2ur1s",
+    "resource": {
+      "type": "project",
+      "labels": {
+        "project_id": "elegant-weaver-435322-v8"
+      }
+    },
+    "timestamp": "2024-11-01T18:31:34.228998Z",
+    "severity": "NOTICE",
+    "logName": "projects/elegant-weaver-435322-v8/logs/cloudaudit.googleapis.com%2Factivity",
+    "receiveTimestamp": "2024-11-01T18:31:35.709590449Z"
+  },
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "status": {},
+      "authenticationInfo": {
+        "principalEmail": "hwalker5987@gmail.com"
+      },
+      "requestMetadata": {
+        "callerIp": "2601:547:1981:aac0:7007:4e8a:cb93:6024",
+        "callerSuppliedUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:131.0) Gecko/20100101 Firefox/131.0,gzip(gfe),gzip(gfe)",
+        "requestAttributes": {},
+        "destinationAttributes": {}
+      },
+      "serviceName": "cloudresourcemanager.googleapis.com",
+      "methodName": "SetIamPolicy",
+      "authorizationInfo": [
+        {
+          "resource": "projects/elegant-weaver-435322-v8",
+          "permission": "resourcemanager.projects.setIamPolicy",
+          "granted": true,
+          "resourceAttributes": {
+            "service": "cloudresourcemanager.googleapis.com",
+            "name": "projects/elegant-weaver-435322-v8",
+            "type": "cloudresourcemanager.googleapis.com/Project"
+          },
+          "permissionType": "ADMIN_WRITE"
+        },
+        {
+          "resource": "projects/elegant-weaver-435322-v8",
+          "permission": "resourcemanager.projects.setIamPolicy",
+          "granted": true,
+          "resourceAttributes": {
+            "service": "cloudresourcemanager.googleapis.com",
+            "name": "projects/elegant-weaver-435322-v8",
+            "type": "cloudresourcemanager.googleapis.com/Project"
+          },
+          "permissionType": "ADMIN_WRITE"
+        }
+      ],
+      "resourceName": "projects/elegant-weaver-435322-v8",
+      "serviceData": {
+        "@type": "type.googleapis.com/google.iam.v1.logging.AuditData",
+        "policyDelta": {
+          "bindingDeltas": [
+            {
+              "action": "REMOVE",
+              "role": "roles/artifactregistry.admin",
+              "member": "user:hwalker5987@gmail.com"
+            },
+            {
+              "action": "ADD",
+              "role": "roles/serviceusage.serviceUsageAdmin",
+              "member": "user:hwalker5987@gmail.com"
+            }
+          ]
+        }
+      },
+      "request": {
+        "resource": "elegant-weaver-435322-v8",
+        "policy": {
+          "etag": "BwYl3iUPQms=",
+          "bindings": [
+            {
+              "members": [
+                "serviceAccount:service-186852006700@gcp-sa-artifactregistry.iam.gserviceaccount.com"
+              ],
+              "role": "roles/artifactregistry.serviceAgent"
+            },
+            {
+              "members": [
+                "serviceAccount:service-186852006700@compute-system.iam.gserviceaccount.com"
+              ],
+              "role": "roles/compute.serviceAgent"
+            },
+            {
+              "members": [
+                "serviceAccount:186852006700-compute@developer.gserviceaccount.com",
+                "serviceAccount:186852006700@cloudservices.gserviceaccount.com"
+              ],
+              "role": "roles/editor"
+            },
+            {
+              "members": [
+                "user:hwalker5987@gmail.com"
+              ],
+              "role": "roles/owner"
+            },
+            {
+              "role": "roles/serviceusage.serviceUsageAdmin",
+              "members": [
+                "user:hwalker5987@gmail.com"
+              ]
+            }
+          ]
+        },
+        "@type": "type.googleapis.com/google.iam.v1.SetIamPolicyRequest"
+      },
+      "response": {
+        "@type": "type.googleapis.com/google.iam.v1.Policy",
+        "bindings": [
+          {
+            "members": [
+              "serviceAccount:service-186852006700@gcp-sa-artifactregistry.iam.gserviceaccount.com"
+            ],
+            "role": "roles/artifactregistry.serviceAgent"
+          },
+          {
+            "members": [
+              "serviceAccount:service-186852006700@compute-system.iam.gserviceaccount.com"
+            ],
+            "role": "roles/compute.serviceAgent"
+          },
+          {
+            "members": [
+              "serviceAccount:186852006700-compute@developer.gserviceaccount.com",
+              "serviceAccount:186852006700@cloudservices.gserviceaccount.com"
+            ],
+            "role": "roles/editor"
+          },
+          {
+            "members": [
+              "user:hwalker5987@gmail.com"
+            ],
+            "role": "roles/owner"
+          },
+          {
+            "members": [
+              "user:hwalker5987@gmail.com"
+            ],
+            "role": "roles/serviceusage.serviceUsageAdmin"
+          }
+        ],
+        "etag": "BwYl3mjNSIg="
+      }
+    },
+    "insertId": "y5ubcve2vloc",
+    "resource": {
+      "type": "project",
+      "labels": {
+        "project_id": "elegant-weaver-435322-v8"
+      }
+    },
+    "timestamp": "2024-11-01T18:50:30.481721Z",
+    "severity": "NOTICE",
+    "logName": "projects/elegant-weaver-435322-v8/logs/cloudaudit.googleapis.com%2Factivity",
+    "receiveTimestamp": "2024-11-01T18:50:31.784495288Z"
+  },
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "status": {},
+      "authenticationInfo": {
+        "principalEmail": "hwalker5987@gmail.com"
+      },
+      "requestMetadata": {
+        "callerIp": "2601:547:1981:aac0:7007:4e8a:cb93:6024",
+        "callerSuppliedUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:131.0) Gecko/20100101 Firefox/131.0,gzip(gfe),gzip(gfe)",
+        "requestAttributes": {},
+        "destinationAttributes": {}
+      },
+      "serviceName": "cloudresourcemanager.googleapis.com",
+      "methodName": "SetIamPolicy",
+      "authorizationInfo": [
+        {
+          "resource": "projects/elegant-weaver-435322-v8",
+          "permission": "resourcemanager.projects.setIamPolicy",
+          "granted": true,
+          "resourceAttributes": {
+            "service": "cloudresourcemanager.googleapis.com",
+            "name": "projects/elegant-weaver-435322-v8",
+            "type": "cloudresourcemanager.googleapis.com/Project"
+          },
+          "permissionType": "ADMIN_WRITE"
+        },
+        {
+          "resource": "projects/elegant-weaver-435322-v8",
+          "permission": "resourcemanager.projects.setIamPolicy",
+          "granted": true,
+          "resourceAttributes": {
+            "service": "cloudresourcemanager.googleapis.com",
+            "name": "projects/elegant-weaver-435322-v8",
+            "type": "cloudresourcemanager.googleapis.com/Project"
+          },
+          "permissionType": "ADMIN_WRITE"
+        }
+      ],
+      "resourceName": "projects/elegant-weaver-435322-v8",
+      "serviceData": {
+        "@type": "type.googleapis.com/google.iam.v1.logging.AuditData",
+        "policyDelta": {
+          "bindingDeltas": [
+            {
+              "action": "REMOVE",
+              "role": "roles/editor",
+              "member": "serviceAccount:186852006700-compute@developer.gserviceaccount.com"
+            },
+            {
+              "action": "ADD",
+              "role": "roles/serviceusage.serviceUsageAdmin",
+              "member": "serviceAccount:186852006700-compute@developer.gserviceaccount.com"
+            }
+          ]
+        }
+      },
+      "request": {
+        "@type": "type.googleapis.com/google.iam.v1.SetIamPolicyRequest",
+        "policy": {
+          "bindings": [
+            {
+              "role": "roles/artifactregistry.serviceAgent",
+              "members": [
+                "serviceAccount:service-186852006700@gcp-sa-artifactregistry.iam.gserviceaccount.com"
+              ]
+            },
+            {
+              "members": [
+                "serviceAccount:service-186852006700@compute-system.iam.gserviceaccount.com"
+              ],
+              "role": "roles/compute.serviceAgent"
+            },
+            {
+              "members": [
+                "serviceAccount:186852006700@cloudservices.gserviceaccount.com"
+              ],
+              "role": "roles/editor"
+            },
+            {
+              "members": [
+                "user:hwalker5987@gmail.com"
+              ],
+              "role": "roles/owner"
+            },
+            {
+              "members": [
+                "user:hwalker5987@gmail.com",
+                "serviceAccount:186852006700-compute@developer.gserviceaccount.com"
+              ],
+              "role": "roles/serviceusage.serviceUsageAdmin"
+            }
+          ],
+          "etag": "BwYl3mjNSIg="
+        },
+        "resource": "elegant-weaver-435322-v8"
+      },
+      "response": {
+        "@type": "type.googleapis.com/google.iam.v1.Policy",
+        "bindings": [
+          {
+            "members": [
+              "serviceAccount:service-186852006700@gcp-sa-artifactregistry.iam.gserviceaccount.com"
+            ],
+            "role": "roles/artifactregistry.serviceAgent"
+          },
+          {
+            "members": [
+              "serviceAccount:service-186852006700@compute-system.iam.gserviceaccount.com"
+            ],
+            "role": "roles/compute.serviceAgent"
+          },
+          {
+            "members": [
+              "serviceAccount:186852006700@cloudservices.gserviceaccount.com"
+            ],
+            "role": "roles/editor"
+          },
+          {
+            "role": "roles/owner",
+            "members": [
+              "user:hwalker5987@gmail.com"
+            ]
+          },
+          {
+            "members": [
+              "serviceAccount:186852006700-compute@developer.gserviceaccount.com",
+              "user:hwalker5987@gmail.com"
+            ],
+            "role": "roles/serviceusage.serviceUsageAdmin"
+          }
+        ],
+        "etag": "BwYl3mqFqBA="
+      }
+    },
+    "insertId": "-89iozke2vq28",
+    "resource": {
+      "type": "project",
+      "labels": {
+        "project_id": "elegant-weaver-435322-v8"
+      }
+    },
+    "timestamp": "2024-11-01T18:50:59.612624Z",
+    "severity": "NOTICE",
+    "logName": "projects/elegant-weaver-435322-v8/logs/cloudaudit.googleapis.com%2Factivity",
+    "receiveTimestamp": "2024-11-01T18:51:01.298949072Z"
+  },
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "status": {
+        "code": 6,
+        "message": "Requested entity already exists"
+      },
+      "authenticationInfo": {
+        "principalEmail": "hwalker5987@gmail.com",
+        "principalSubject": "user:hwalker5987@gmail.com"
+      },
+      "requestMetadata": {
+        "callerIp": "34.148.159.166",
+        "callerSuppliedUserAgent": "google-cloud-sdk gcloud/499.0.0 command/gcloud.iam.workload-identity-pools.create invocation-id/2e8bf817103c4f95a19d1f502a132a0b environment/devshell environment-version/None client-os/LINUX client-os-ver/6.1.112 client-pltf-arch/x86_64 interactive/True from-script/False python/3.11.9 term/screen (Linux 6.1.112+),gzip(gfe)",
+        "requestAttributes": {
+          "time": "2024-11-01T18:59:55.932908381Z",
+          "auth": {}
+        },
+        "destinationAttributes": {}
+      },
+      "serviceName": "iam.googleapis.com",
+      "methodName": "google.iam.v1.WorkloadIdentityPools.CreateWorkloadIdentityPool",
+      "authorizationInfo": [
+        {
+          "resource": "projects/elegant-weaver-435322-v8/locations/global",
+          "permission": "iam.workloadIdentityPools.create",
+          "granted": true,
+          "resourceAttributes": {},
+          "permissionType": "ADMIN_WRITE"
+        }
+      ],
+      "resourceName": "projects/elegant-weaver-435322-v8/locations/global",
+      "request": {
+        "workloadIdentityPool": {
+          "disabled": false,
+          "displayName": "GitHub Actions Pool"
+        },
+        "parent": "projects/elegant-weaver-435322-v8/locations/global",
+        "@type": "type.googleapis.com/google.iam.v1.CreateWorkloadIdentityPoolRequest",
+        "workloadIdentityPoolId": "github"
+      },
+      "resourceLocation": {
+        "currentLocations": [
+          "global"
+        ]
+      }
+    },
+    "insertId": "1xxciard9su2",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "method": "google.iam.v1.WorkloadIdentityPools.CreateWorkloadIdentityPool",
+        "project_id": "elegant-weaver-435322-v8",
+        "service": "iam.googleapis.com"
+      }
+    },
+    "timestamp": "2024-11-01T18:59:55.923118791Z",
+    "severity": "ERROR",
+    "logName": "projects/elegant-weaver-435322-v8/logs/cloudaudit.googleapis.com%2Factivity",
+    "receiveTimestamp": "2024-11-01T18:59:56.795172050Z"
+  },
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "status": {
+        "code": 6,
+        "message": "Requested entity already exists"
+      },
+      "authenticationInfo": {
+        "principalEmail": "hwalker5987@gmail.com",
+        "principalSubject": "user:hwalker5987@gmail.com"
+      },
+      "requestMetadata": {
+        "callerIp": "34.148.159.166",
+        "callerSuppliedUserAgent": "google-cloud-sdk gcloud/499.0.0 command/gcloud.iam.workload-identity-pools.providers.create-oidc invocation-id/47e122d578e94e32ab5f0e3538b779e1 environment/devshell environment-version/None client-os/LINUX client-os-ver/6.1.112 client-pltf-arch/x86_64 interactive/True from-script/False python/3.11.9 term/screen (Linux 6.1.112+),gzip(gfe)",
+        "requestAttributes": {
+          "time": "2024-11-01T19:06:26.139740599Z",
+          "auth": {}
+        },
+        "destinationAttributes": {}
+      },
+      "serviceName": "iam.googleapis.com",
+      "methodName": "google.iam.v1.WorkloadIdentityPools.CreateWorkloadIdentityPoolProvider",
+      "authorizationInfo": [
+        {
+          "resource": "projects/elegant-weaver-435322-v8/locations/global/workloadIdentityPools/github",
+          "permission": "iam.workloadIdentityPoolProviders.create",
+          "granted": true,
+          "resourceAttributes": {},
+          "permissionType": "ADMIN_WRITE"
+        }
+      ],
+      "resourceName": "projects/elegant-weaver-435322-v8/locations/global/workloadIdentityPools/github",
+      "request": {
+        "workloadIdentityPoolProviderId": "my-repo",
+        "workloadIdentityPoolProvider": {
+          "attributeMapping": {
+            "attribute.actor": "assertion.actor",
+            "attribute.repository": "assertion.repository",
+            "google.subject": "assertion.sub",
+            "attribute.repository_owner": "assertion.repository_owner"
+          },
+          "disabled": false,
+          "oidc": {
+            "issuerUri": "https://token.actions.githubusercontent.com"
+          },
+          "attributeCondition": "assertion.repository_owner == 'pitt-cs-1660'",
+          "displayName": "My GitHub Repo Provider"
+        },
+        "parent": "projects/elegant-weaver-435322-v8/locations/global/workloadIdentityPools/github",
+        "@type": "type.googleapis.com/google.iam.v1.CreateWorkloadIdentityPoolProviderRequest"
+      },
+      "resourceLocation": {
+        "currentLocations": [
+          "global"
+        ]
+      }
+    },
+    "insertId": "o5ewspd99jv",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "method": "google.iam.v1.WorkloadIdentityPools.CreateWorkloadIdentityPoolProvider",
+        "project_id": "elegant-weaver-435322-v8",
+        "service": "iam.googleapis.com"
+      }
+    },
+    "timestamp": "2024-11-01T19:06:26.118367264Z",
+    "severity": "ERROR",
+    "logName": "projects/elegant-weaver-435322-v8/logs/cloudaudit.googleapis.com%2Factivity",
+    "receiveTimestamp": "2024-11-01T19:06:27.728312981Z"
+  },
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "authenticationInfo": {
+        "principalEmail": "hwalker5987@gmail.com",
+        "principalSubject": "user:hwalker5987@gmail.com"
+      },
+      "requestMetadata": {
+        "callerIp": "34.148.159.166",
+        "callerSuppliedUserAgent": "google-cloud-sdk gcloud/499.0.0 command/gcloud.secrets.add-iam-policy-binding invocation-id/a85235c24a97460fac8fa2d7523acc04 environment/devshell environment-version/None client-os/LINUX client-os-ver/6.1.112 client-pltf-arch/x86_64 interactive/True from-script/False python/3.11.9 term/screen (Linux 6.1.112+),gzip(gfe)",
+        "requestAttributes": {
+          "time": "2024-11-01T19:14:34.469322631Z",
+          "auth": {}
+        },
+        "destinationAttributes": {}
+      },
+      "serviceName": "secretmanager.googleapis.com",
+      "methodName": "google.cloud.secretmanager.v1.SecretManagerService.SetIamPolicy",
+      "authorizationInfo": [
+        {
+          "permission": "secretmanager.secrets.setIamPolicy",
+          "granted": true,
+          "resourceAttributes": {
+            "service": "secretmanager.googleapis.com",
+            "name": "projects/186852006700/secrets/my-secret",
+            "type": "secretmanager.googleapis.com/Secret"
+          },
+          "permissionType": "ADMIN_WRITE"
+        }
+      ],
+      "resourceName": "projects/186852006700/secrets/my-secret",
+      "request": {
+        "policy": {
+          "bindings": [
+            {
+              "role": "roles/secretmanager.secretAccessor",
+              "members": [
+                "principalSet://iam.googleapis.com/projects/186852006700/locations/global/workloadIdentityPools/github/attribute.repository/pitt-cs-1660/build-and-push-image-HWalk59"
+              ]
+            }
+          ],
+          "etag": "BwYl3iC3e5k="
+        },
+        "resource": "projects/elegant-weaver-435322-v8/secrets/my-secret",
+        "@type": "type.googleapis.com/google.iam.v1.SetIamPolicyRequest"
+      },
+      "response": {
+        "@type": "type.googleapis.com/google.iam.v1.Policy",
+        "bindings": [
+          {
+            "members": [
+              "principalSet://iam.googleapis.com/projects/186852006700/locations/global/workloadIdentityPools/github/attribute.repository/pitt-cs-1660/build-and-push-image-HWalk59"
+            ],
+            "role": "roles/secretmanager.secretAccessor"
+          }
+        ],
+        "etag": "BwYl3r7OmYo="
+      }
+    },
+    "insertId": "u0sqdve1k1ro",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "service": "secretmanager.googleapis.com",
+        "method": "google.cloud.secretmanager.v1.SecretManagerService.SetIamPolicy",
+        "project_id": "elegant-weaver-435322-v8"
+      }
+    },
+    "timestamp": "2024-11-01T19:14:33.798744673Z",
+    "severity": "NOTICE",
+    "logName": "projects/elegant-weaver-435322-v8/logs/cloudaudit.googleapis.com%2Factivity",
+    "receiveTimestamp": "2024-11-01T19:14:34.660431578Z"
+  },
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "authenticationInfo": {
+        "principalEmail": "hwalker5987@gmail.com",
+        "principalSubject": "user:hwalker5987@gmail.com"
+      },
+      "requestMetadata": {
+        "callerIp": "34.148.159.166",
+        "callerSuppliedUserAgent": "google-cloud-sdk gcloud/499.0.0 command/gcloud.auth.application-default.login invocation-id/ae603b44221945e5861edb7c4b58bc9c environment/devshell environment-version/None client-os/LINUX client-os-ver/6.1.112 client-pltf-arch/x86_64 interactive/True from-script/False python/3.11.9 term/screen (Linux 6.1.112+),gzip(gfe)",
+        "requestAttributes": {},
+        "destinationAttributes": {}
+      },
+      "serviceName": "serviceusage.googleapis.com",
+      "methodName": "google.api.serviceusage.v1.ServiceUsage.EnableService",
+      "authorizationInfo": [
+        {
+          "resource": "projectnumbers/186852006700/services/cloudresourcemanager.googleapis.com",
+          "permission": "serviceusage.services.enable",
+          "granted": true,
+          "resourceAttributes": {},
+          "permissionType": "ADMIN_WRITE"
+        },
+        {
+          "resource": "services/cloudresourcemanager.googleapis.com",
+          "permission": "servicemanagement.services.bind",
+          "granted": true,
+          "resourceAttributes": {},
+          "permissionType": "DATA_WRITE"
+        }
+      ],
+      "resourceName": "projects/elegant-weaver-435322-v8/services/cloudresourcemanager.googleapis.com",
+      "request": {
+        "name": "projects/elegant-weaver-435322-v8/services/cloudresourcemanager.googleapis.com",
+        "@type": "type.googleapis.com/google.api.serviceusage.v1.EnableServiceRequest"
+      }
+    },
+    "insertId": "9gcz8xdghec",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "method": "google.api.serviceusage.v1.ServiceUsage.EnableService",
+        "service": "serviceusage.googleapis.com",
+        "project_id": "elegant-weaver-435322-v8"
+      }
+    },
+    "timestamp": "2024-11-01T19:19:45.253364Z",
+    "severity": "NOTICE",
+    "logName": "projects/elegant-weaver-435322-v8/logs/cloudaudit.googleapis.com%2Factivity",
+    "operation": {
+      "id": "operations/acat.p2-186852006700-964b5f73-18c2-4494-98f2-d500229d968a",
+      "producer": "serviceusage.googleapis.com",
+      "first": true
+    },
+    "receiveTimestamp": "2024-11-01T19:19:46.543120623Z"
+  },
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "status": {},
+      "authenticationInfo": {
+        "principalEmail": "hwalker5987@gmail.com",
+        "principalSubject": "user:hwalker5987@gmail.com"
+      },
+      "requestMetadata": {
+        "callerIp": "34.148.159.166",
+        "callerSuppliedUserAgent": "google-cloud-sdk gcloud/499.0.0 command/gcloud.auth.application-default.login invocation-id/ae603b44221945e5861edb7c4b58bc9c environment/devshell environment-version/None client-os/LINUX client-os-ver/6.1.112 client-pltf-arch/x86_64 interactive/True from-script/False python/3.11.9 term/screen (Linux 6.1.112+),gzip(gfe)",
+        "requestAttributes": {},
+        "destinationAttributes": {}
+      },
+      "serviceName": "serviceusage.googleapis.com",
+      "methodName": "google.longrunning.Operations.GetOperation",
+      "authorizationInfo": [
+        {
+          "resource": "projectnumbers/186852006700",
+          "permission": "serviceusage.services.enable",
+          "granted": true,
+          "resourceAttributes": {},
+          "permissionType": "ADMIN_WRITE"
+        },
+        {
+          "resource": "projectnumbers/186852006700/operations/-",
+          "permission": "serviceusage.operations.get",
+          "granted": true,
+          "resourceAttributes": {},
+          "permissionType": "DATA_READ"
+        },
+        {
+          "resource": "projectnumbers/186852006700",
+          "permission": "serviceusage.services.get",
+          "granted": true,
+          "resourceAttributes": {},
+          "permissionType": "DATA_READ"
+        }
+      ],
+      "resourceName": "projects/186852006700/operations/acat.p2-186852006700-964b5f73-18c2-4494-98f2-d500229d968a"
+    },
+    "insertId": "l3xej3d9c18",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "project_id": "elegant-weaver-435322-v8",
+        "method": "google.longrunning.Operations.GetOperation",
+        "service": "serviceusage.googleapis.com"
+      }
+    },
+    "timestamp": "2024-11-01T19:19:45.939034Z",
+    "severity": "NOTICE",
+    "logName": "projects/elegant-weaver-435322-v8/logs/cloudaudit.googleapis.com%2Factivity",
+    "receiveTimestamp": "2024-11-01T19:19:46.928492520Z"
+  },
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "status": {},
+      "authenticationInfo": {
+        "principalEmail": "hwalker5987@gmail.com",
+        "principalSubject": "user:hwalker5987@gmail.com"
+      },
+      "requestMetadata": {
+        "callerIp": "34.148.159.166",
+        "callerSuppliedUserAgent": "google-cloud-sdk gcloud/499.0.0 command/gcloud.auth.application-default.login invocation-id/ae603b44221945e5861edb7c4b58bc9c environment/devshell environment-version/None client-os/LINUX client-os-ver/6.1.112 client-pltf-arch/x86_64 interactive/True from-script/False python/3.11.9 term/screen (Linux 6.1.112+),gzip(gfe)",
+        "requestAttributes": {},
+        "destinationAttributes": {}
+      },
+      "serviceName": "serviceusage.googleapis.com",
+      "methodName": "google.api.serviceusage.v1.ServiceUsage.EnableService",
+      "authorizationInfo": [
+        {
+          "resource": "projectnumbers/186852006700/services/cloudresourcemanager.googleapis.com",
+          "permission": "serviceusage.services.enable",
+          "granted": true,
+          "resourceAttributes": {},
+          "permissionType": "ADMIN_WRITE"
+        },
+        {
+          "resource": "services/cloudresourcemanager.googleapis.com",
+          "permission": "servicemanagement.services.bind",
+          "granted": true,
+          "resourceAttributes": {},
+          "permissionType": "DATA_WRITE"
+        }
+      ],
+      "resourceName": "projects/elegant-weaver-435322-v8/services/cloudresourcemanager.googleapis.com",
+      "request": {
+        "@type": "type.googleapis.com/google.api.serviceusage.v1.EnableServiceRequest",
+        "name": "projects/elegant-weaver-435322-v8/services/cloudresourcemanager.googleapis.com"
+      },
+      "response": {
+        "@type": "type.googleapis.com/google.api.serviceusage.v1.EnableServiceResponse",
+        "service": {
+          "config": {
+            "name": "cloudresourcemanager.googleapis.com",
+            "title": "Cloud Resource Manager API"
+          },
+          "state": "ENABLED",
+          "parent": "projects/186852006700",
+          "name": "projects/186852006700/services/cloudresourcemanager.googleapis.com"
+        }
+      }
+    },
+    "insertId": "8wtjhpd3pf0",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "service": "serviceusage.googleapis.com",
+        "project_id": "elegant-weaver-435322-v8",
+        "method": "google.api.serviceusage.v1.ServiceUsage.EnableService"
+      }
+    },
+    "timestamp": "2024-11-01T19:19:47.367660726Z",
+    "severity": "NOTICE",
+    "logName": "projects/elegant-weaver-435322-v8/logs/cloudaudit.googleapis.com%2Factivity",
+    "operation": {
+      "id": "operations/acat.p2-186852006700-964b5f73-18c2-4494-98f2-d500229d968a",
+      "producer": "serviceusage.googleapis.com",
+      "last": true
+    },
+    "receiveTimestamp": "2024-11-01T19:19:47.367660726Z"
+  },
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "status": {},
+      "authenticationInfo": {
+        "principalEmail": "hwalker5987@gmail.com",
+        "principalSubject": "user:hwalker5987@gmail.com"
+      },
+      "requestMetadata": {
+        "callerIp": "34.148.159.166",
+        "callerSuppliedUserAgent": "google-cloud-sdk gcloud/499.0.0 command/gcloud.auth.application-default.login invocation-id/ae603b44221945e5861edb7c4b58bc9c environment/devshell environment-version/None client-os/LINUX client-os-ver/6.1.112 client-pltf-arch/x86_64 interactive/True from-script/False python/3.11.9 term/screen (Linux 6.1.112+),gzip(gfe)",
+        "requestAttributes": {},
+        "destinationAttributes": {}
+      },
+      "serviceName": "serviceusage.googleapis.com",
+      "methodName": "google.longrunning.Operations.GetOperation",
+      "authorizationInfo": [
+        {
+          "resource": "projectnumbers/186852006700",
+          "permission": "serviceusage.services.enable",
+          "granted": true,
+          "resourceAttributes": {},
+          "permissionType": "ADMIN_WRITE"
+        },
+        {
+          "resource": "projectnumbers/186852006700/operations/-",
+          "permission": "serviceusage.operations.get",
+          "granted": true,
+          "resourceAttributes": {},
+          "permissionType": "DATA_READ"
+        },
+        {
+          "resource": "projectnumbers/186852006700",
+          "permission": "serviceusage.services.get",
+          "granted": true,
+          "resourceAttributes": {},
+          "permissionType": "DATA_READ"
+        }
+      ],
+      "resourceName": "projects/186852006700/operations/acat.p2-186852006700-964b5f73-18c2-4494-98f2-d500229d968a"
+    },
+    "insertId": "1lzwsghdc96f",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "method": "google.longrunning.Operations.GetOperation",
+        "service": "serviceusage.googleapis.com",
+        "project_id": "elegant-weaver-435322-v8"
+      }
+    },
+    "timestamp": "2024-11-01T19:19:48.965098Z",
+    "severity": "NOTICE",
+    "logName": "projects/elegant-weaver-435322-v8/logs/cloudaudit.googleapis.com%2Factivity",
+    "receiveTimestamp": "2024-11-01T19:19:49.838609757Z"
+  },
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "authenticationInfo": {
+        "principalEmail": "hwalker5987@gmail.com",
+        "principalSubject": "user:hwalker5987@gmail.com"
+      },
+      "requestMetadata": {
+        "callerIp": "34.148.159.166",
+        "callerSuppliedUserAgent": "google-cloud-sdk gcloud/499.0.0 command/gcloud.artifacts.repositories.create invocation-id/5522b8ef0e4d4c519529a95383f6bf73 environment/devshell environment-version/None client-os/LINUX client-os-ver/6.1.112 client-pltf-arch/x86_64 interactive/True from-script/False python/3.11.9 term/screen (Linux 6.1.112+),gzip(gfe),gzip(gfe)",
+        "requestAttributes": {
+          "time": "2024-11-01T19:31:40.570609477Z",
+          "auth": {}
+        },
+        "destinationAttributes": {}
+      },
+      "serviceName": "artifactregistry.googleapis.com",
+      "methodName": "google.devtools.artifactregistry.v1.ArtifactRegistry.CreateRepository",
+      "authorizationInfo": [
+        {
+          "resource": "projects/elegant-weaver-435322-v8/locations/us-east1",
+          "permission": "artifactregistry.repositories.create",
+          "granted": true,
+          "resourceAttributes": {},
+          "permissionType": "ADMIN_WRITE"
+        }
+      ],
+      "resourceName": "projects/elegant-weaver-435322-v8/locations/us-east1",
+      "request": {
+        "repositoryId": "artifact-repo",
+        "parent": "projects/elegant-weaver-435322-v8/locations/us-east1",
+        "@type": "type.googleapis.com/google.devtools.artifactregistry.v1.CreateRepositoryRequest",
+        "repository": {
+          "name": "projects/elegant-weaver-435322-v8/locations/us-east1/repositories/artifact-repo",
+          "format": "DOCKER"
+        }
+      },
+      "resourceLocation": {
+        "currentLocations": [
+          "us-east1"
+        ]
+      }
+    },
+    "insertId": "1v6zq5pd2k8o",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "project_id": "elegant-weaver-435322-v8",
+        "service": "artifactregistry.googleapis.com",
+        "method": "google.devtools.artifactregistry.v1.ArtifactRegistry.CreateRepository"
+      }
+    },
+    "timestamp": "2024-11-01T19:31:40.563401818Z",
+    "severity": "NOTICE",
+    "logName": "projects/elegant-weaver-435322-v8/logs/cloudaudit.googleapis.com%2Factivity",
+    "operation": {
+      "id": "projects/elegant-weaver-435322-v8/locations/us-east1/operations/66d7a647-fa3d-4835-8a2e-f81a938d2de1",
+      "producer": "artifactregistry.googleapis.com",
+      "first": true
+    },
+    "receiveTimestamp": "2024-11-01T19:31:40.664251560Z"
+  },
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "status": {},
+      "authenticationInfo": {
+        "principalEmail": "hwalker5987@gmail.com",
+        "principalSubject": "user:hwalker5987@gmail.com"
+      },
+      "requestMetadata": {
+        "requestAttributes": {},
+        "destinationAttributes": {}
+      },
+      "serviceName": "artifactregistry.googleapis.com",
+      "methodName": "google.devtools.artifactregistry.v1.ArtifactRegistry.CreateRepository",
+      "resourceName": "projects/elegant-weaver-435322-v8/locations/us-east1/repositories/artifact-repo",
+      "response": {
+        "vulnerabilityScanningConfig": {
+          "lastEnableTime": "2024-11-01T19:31:40.579696654Z"
+        },
+        "format": "DOCKER",
+        "name": "projects/elegant-weaver-435322-v8/locations/us-east1/repositories/artifact-repo",
+        "mode": "STANDARD_REPOSITORY",
+        "sbomConfig": {},
+        "@type": "type.googleapis.com/google.protobuf.Any"
+      }
+    },
+    "insertId": "xwnfm0cl89",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "project_id": "elegant-weaver-435322-v8",
+        "method": "google.devtools.artifactregistry.v1.ArtifactRegistry.CreateRepository",
+        "service": "artifactregistry.googleapis.com"
+      }
+    },
+    "timestamp": "2024-11-01T19:31:41.834246107Z",
+    "severity": "NOTICE",
+    "logName": "projects/elegant-weaver-435322-v8/logs/cloudaudit.googleapis.com%2Factivity",
+    "operation": {
+      "id": "projects/elegant-weaver-435322-v8/locations/us-east1/operations/66d7a647-fa3d-4835-8a2e-f81a938d2de1",
+      "producer": "artifactregistry.googleapis.com",
+      "last": true
+    },
+    "receiveTimestamp": "2024-11-01T19:31:42.082745757Z"
+  },
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "status": {
+        "code": 3,
+        "message": "Invalid principalSet member (principalSet://iam.googleapis.com/projects/186852006700/locations/global/workloadIdentityPools/github/subjects/pitt-cs-1660)."
+      },
+      "authenticationInfo": {
+        "principalEmail": "hwalker5987@gmail.com",
+        "principalSubject": "user:hwalker5987@gmail.com"
+      },
+      "requestMetadata": {
+        "callerIp": "34.148.159.166",
+        "callerSuppliedUserAgent": "google-cloud-sdk gcloud/499.0.0 command/gcloud.artifacts.repositories.add-iam-policy-binding invocation-id/5859db31ff234eccb150b2c2b6ca8147 environment/devshell environment-version/None client-os/LINUX client-os-ver/6.1.112 client-pltf-arch/x86_64 interactive/True from-script/False python/3.11.9 term/screen (Linux 6.1.112+),gzip(gfe),gzip(gfe)",
+        "requestAttributes": {
+          "time": "2024-11-01T19:37:03.565092910Z",
+          "auth": {}
+        },
+        "destinationAttributes": {}
+      },
+      "serviceName": "artifactregistry.googleapis.com",
+      "methodName": "google.devtools.artifactregistry.v1.ArtifactRegistry.SetIamPolicy",
+      "authorizationInfo": [
+        {
+          "resource": "projects/elegant-weaver-435322-v8/locations/us-east1/repositories/artifact-repo",
+          "permission": "artifactregistry.repositories.setIamPolicy",
+          "granted": true,
+          "resourceAttributes": {},
+          "permissionType": "ADMIN_WRITE"
+        }
+      ],
+      "resourceName": "projects/elegant-weaver-435322-v8/locations/us-east1/repositories/artifact-repo",
+      "request": {
+        "resource": "projects/elegant-weaver-435322-v8/locations/us-east1/repositories/artifact-repo",
+        "@type": "type.googleapis.com/google.iam.v1.SetIamPolicyRequest"
+      }
+    },
+    "insertId": "1v6d4a3d2i9k",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "method": "google.devtools.artifactregistry.v1.ArtifactRegistry.SetIamPolicy",
+        "project_id": "elegant-weaver-435322-v8",
+        "service": "artifactregistry.googleapis.com"
+      }
+    },
+    "timestamp": "2024-11-01T19:37:03.553469452Z",
+    "severity": "ERROR",
+    "logName": "projects/elegant-weaver-435322-v8/logs/cloudaudit.googleapis.com%2Factivity",
+    "receiveTimestamp": "2024-11-01T19:37:04.547690302Z"
+  },
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "status": {
+        "code": 3,
+        "message": "Invalid principalSet member (principalSet://iam.googleapis.com/projects/186852006700/locations/global/workloadIdentityPools/github/subjects/pitt-cs-1660)."
+      },
+      "authenticationInfo": {
+        "principalEmail": "hwalker5987@gmail.com",
+        "principalSubject": "user:hwalker5987@gmail.com"
+      },
+      "requestMetadata": {
+        "callerIp": "34.148.159.166",
+        "callerSuppliedUserAgent": "google-cloud-sdk gcloud/499.0.0 command/gcloud.artifacts.repositories.add-iam-policy-binding invocation-id/dfe79b8c0875455bb456996bb91d313b environment/devshell environment-version/None client-os/LINUX client-os-ver/6.1.112 client-pltf-arch/x86_64 interactive/True from-script/False python/3.11.9 term/screen (Linux 6.1.112+),gzip(gfe),gzip(gfe)",
+        "requestAttributes": {
+          "time": "2024-11-01T19:38:21.356184750Z",
+          "auth": {}
+        },
+        "destinationAttributes": {}
+      },
+      "serviceName": "artifactregistry.googleapis.com",
+      "methodName": "google.devtools.artifactregistry.v1.ArtifactRegistry.SetIamPolicy",
+      "authorizationInfo": [
+        {
+          "resource": "projects/elegant-weaver-435322-v8/locations/us-east1/repositories/artifact-repo",
+          "permission": "artifactregistry.repositories.setIamPolicy",
+          "granted": true,
+          "resourceAttributes": {},
+          "permissionType": "ADMIN_WRITE"
+        }
+      ],
+      "resourceName": "projects/elegant-weaver-435322-v8/locations/us-east1/repositories/artifact-repo",
+      "request": {
+        "resource": "projects/elegant-weaver-435322-v8/locations/us-east1/repositories/artifact-repo",
+        "@type": "type.googleapis.com/google.iam.v1.SetIamPolicyRequest"
+      }
+    },
+    "insertId": "4gjdxkd2k8t",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "method": "google.devtools.artifactregistry.v1.ArtifactRegistry.SetIamPolicy",
+        "service": "artifactregistry.googleapis.com",
+        "project_id": "elegant-weaver-435322-v8"
+      }
+    },
+    "timestamp": "2024-11-01T19:38:21.346417340Z",
+    "severity": "ERROR",
+    "logName": "projects/elegant-weaver-435322-v8/logs/cloudaudit.googleapis.com%2Factivity",
+    "receiveTimestamp": "2024-11-01T19:38:21.895645246Z"
+  },
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "authenticationInfo": {
+        "principalEmail": "hwalker5987@gmail.com",
+        "principalSubject": "user:hwalker5987@gmail.com"
+      },
+      "requestMetadata": {
+        "callerIp": "2601:547:1981:aac0:7007:4e8a:cb93:6024",
+        "callerSuppliedUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:131.0) Gecko/20100101 Firefox/131.0,gzip(gfe),gzip(gfe)",
+        "requestAttributes": {
+          "time": "2024-11-01T19:41:49.014042399Z",
+          "auth": {}
+        },
+        "destinationAttributes": {}
+      },
+      "serviceName": "artifactregistry.googleapis.com",
+      "methodName": "google.devtools.artifactregistry.v1.ArtifactRegistry.DeleteRepository",
+      "authorizationInfo": [
+        {
+          "resource": "projects/elegant-weaver-435322-v8/locations/us-east1/repositories/artifact-registry1",
+          "permission": "artifactregistry.repositories.delete",
+          "granted": true,
+          "resourceAttributes": {},
+          "permissionType": "ADMIN_WRITE"
+        }
+      ],
+      "resourceName": "projects/elegant-weaver-435322-v8/locations/us-east1/repositories/artifact-registry1",
+      "request": {
+        "@type": "type.googleapis.com/google.devtools.artifactregistry.v1.DeleteRepositoryRequest",
+        "name": "projects/elegant-weaver-435322-v8/locations/us-east1/repositories/artifact-registry1"
+      }
+    },
+    "insertId": "1i5jvmyc43g",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "project_id": "elegant-weaver-435322-v8",
+        "method": "google.devtools.artifactregistry.v1.ArtifactRegistry.DeleteRepository",
+        "service": "artifactregistry.googleapis.com"
+      }
+    },
+    "timestamp": "2024-11-01T19:41:49.005936645Z",
+    "severity": "NOTICE",
+    "logName": "projects/elegant-weaver-435322-v8/logs/cloudaudit.googleapis.com%2Factivity",
+    "operation": {
+      "id": "projects/elegant-weaver-435322-v8/locations/us-east1/operations/823b05c5-68e5-433d-aa34-6272f30c17f6",
+      "producer": "artifactregistry.googleapis.com",
+      "first": true
+    },
+    "receiveTimestamp": "2024-11-01T19:41:49.740986461Z"
+  },
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "status": {},
+      "authenticationInfo": {
+        "principalEmail": "hwalker5987@gmail.com",
+        "principalSubject": "user:hwalker5987@gmail.com"
+      },
+      "requestMetadata": {
+        "requestAttributes": {},
+        "destinationAttributes": {}
+      },
+      "serviceName": "artifactregistry.googleapis.com",
+      "methodName": "google.devtools.artifactregistry.v1.ArtifactRegistry.DeleteRepository",
+      "resourceName": "projects/elegant-weaver-435322-v8/locations/us-east1/repositories/artifact-registry1",
+      "response": {
+        "value": {},
+        "@type": "type.googleapis.com/google.protobuf.Any"
+      }
+    },
+    "insertId": "79rscddirfr",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "method": "google.devtools.artifactregistry.v1.ArtifactRegistry.DeleteRepository",
+        "service": "artifactregistry.googleapis.com",
+        "project_id": "elegant-weaver-435322-v8"
+      }
+    },
+    "timestamp": "2024-11-01T19:41:49.117358836Z",
+    "severity": "NOTICE",
+    "logName": "projects/elegant-weaver-435322-v8/logs/cloudaudit.googleapis.com%2Factivity",
+    "operation": {
+      "id": "projects/elegant-weaver-435322-v8/locations/us-east1/operations/823b05c5-68e5-433d-aa34-6272f30c17f6",
+      "producer": "artifactregistry.googleapis.com",
+      "last": true
+    },
+    "receiveTimestamp": "2024-11-01T19:41:49.619735713Z"
+  },
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "status": {
+        "code": 3,
+        "message": "Invalid principalSet member (principalSet://iam.googleapis.com/projects/186852006700/locations/global/workloadIdentityPools/github/subjects/pitt-cs-1660)."
+      },
+      "authenticationInfo": {
+        "principalEmail": "hwalker5987@gmail.com",
+        "principalSubject": "user:hwalker5987@gmail.com"
+      },
+      "requestMetadata": {
+        "callerIp": "34.148.159.166",
+        "callerSuppliedUserAgent": "google-cloud-sdk gcloud/499.0.0 command/gcloud.artifacts.repositories.add-iam-policy-binding invocation-id/b9f2fae68e2e43d48f5ce6bdbb1dec3e environment/devshell environment-version/None client-os/LINUX client-os-ver/6.1.112 client-pltf-arch/x86_64 interactive/True from-script/False python/3.11.9 term/screen (Linux 6.1.112+),gzip(gfe),gzip(gfe)",
+        "requestAttributes": {
+          "time": "2024-11-01T19:42:54.342505852Z",
+          "auth": {}
+        },
+        "destinationAttributes": {}
+      },
+      "serviceName": "artifactregistry.googleapis.com",
+      "methodName": "google.devtools.artifactregistry.v1.ArtifactRegistry.SetIamPolicy",
+      "authorizationInfo": [
+        {
+          "resource": "projects/elegant-weaver-435322-v8/locations/us-east1/repositories/artifact-repo",
+          "permission": "artifactregistry.repositories.setIamPolicy",
+          "granted": true,
+          "resourceAttributes": {},
+          "permissionType": "ADMIN_WRITE"
+        }
+      ],
+      "resourceName": "projects/elegant-weaver-435322-v8/locations/us-east1/repositories/artifact-repo",
+      "request": {
+        "@type": "type.googleapis.com/google.iam.v1.SetIamPolicyRequest",
+        "resource": "projects/elegant-weaver-435322-v8/locations/us-east1/repositories/artifact-repo"
+      }
+    },
+    "insertId": "7i6gx0d2i4z",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "project_id": "elegant-weaver-435322-v8",
+        "service": "artifactregistry.googleapis.com",
+        "method": "google.devtools.artifactregistry.v1.ArtifactRegistry.SetIamPolicy"
+      }
+    },
+    "timestamp": "2024-11-01T19:42:54.335016262Z",
+    "severity": "ERROR",
+    "logName": "projects/elegant-weaver-435322-v8/logs/cloudaudit.googleapis.com%2Factivity",
+    "receiveTimestamp": "2024-11-01T19:42:55.328882677Z"
+  },
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "status": {
+        "code": 3,
+        "message": "Invalid principalSet member (principalSet://iam.googleapis.com/projects/186852006700/locations/global/workloadIdentityPools/github/subjects/pitt-cs-1660)."
+      },
+      "authenticationInfo": {
+        "principalEmail": "hwalker5987@gmail.com",
+        "principalSubject": "user:hwalker5987@gmail.com"
+      },
+      "requestMetadata": {
+        "callerIp": "34.148.159.166",
+        "callerSuppliedUserAgent": "google-cloud-sdk gcloud/499.0.0 command/gcloud.artifacts.repositories.add-iam-policy-binding invocation-id/eb52956763d9440ca31de0d93c3bcbe2 environment/devshell environment-version/None client-os/LINUX client-os-ver/6.1.112 client-pltf-arch/x86_64 interactive/True from-script/False python/3.11.9 term/screen (Linux 6.1.112+),gzip(gfe),gzip(gfe)",
+        "requestAttributes": {
+          "time": "2024-11-01T19:43:50.956073634Z",
+          "auth": {}
+        },
+        "destinationAttributes": {}
+      },
+      "serviceName": "artifactregistry.googleapis.com",
+      "methodName": "google.devtools.artifactregistry.v1.ArtifactRegistry.SetIamPolicy",
+      "authorizationInfo": [
+        {
+          "resource": "projects/elegant-weaver-435322-v8/locations/us-east1/repositories/artifact-repo",
+          "permission": "artifactregistry.repositories.setIamPolicy",
+          "granted": true,
+          "resourceAttributes": {},
+          "permissionType": "ADMIN_WRITE"
+        }
+      ],
+      "resourceName": "projects/elegant-weaver-435322-v8/locations/us-east1/repositories/artifact-repo",
+      "request": {
+        "@type": "type.googleapis.com/google.iam.v1.SetIamPolicyRequest",
+        "resource": "projects/elegant-weaver-435322-v8/locations/us-east1/repositories/artifact-repo"
+      }
+    },
+    "insertId": "10nlg65d2i9y",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "service": "artifactregistry.googleapis.com",
+        "method": "google.devtools.artifactregistry.v1.ArtifactRegistry.SetIamPolicy",
+        "project_id": "elegant-weaver-435322-v8"
+      }
+    },
+    "timestamp": "2024-11-01T19:43:50.947378175Z",
+    "severity": "ERROR",
+    "logName": "projects/elegant-weaver-435322-v8/logs/cloudaudit.googleapis.com%2Factivity",
+    "receiveTimestamp": "2024-11-01T19:43:51.145288010Z"
+  },
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "status": {
+        "code": 3,
+        "message": "Invalid principalSet member (principalSet://iam.googleapis.com/projects/186852006700/locations/global/workloadIdentityPools/github/subjects/pitt-cs-1660)."
+      },
+      "authenticationInfo": {
+        "principalEmail": "hwalker5987@gmail.com",
+        "principalSubject": "user:hwalker5987@gmail.com"
+      },
+      "requestMetadata": {
+        "callerIp": "34.148.159.166",
+        "callerSuppliedUserAgent": "google-cloud-sdk gcloud/499.0.0 command/gcloud.artifacts.repositories.add-iam-policy-binding invocation-id/d00a87e16c4a4832a8bbc8e4645309cf environment/devshell environment-version/None client-os/LINUX client-os-ver/6.1.112 client-pltf-arch/x86_64 interactive/True from-script/False python/3.11.9 term/screen (Linux 6.1.112+),gzip(gfe),gzip(gfe)",
+        "requestAttributes": {
+          "time": "2024-11-01T19:46:40.640500253Z",
+          "auth": {}
+        },
+        "destinationAttributes": {}
+      },
+      "serviceName": "artifactregistry.googleapis.com",
+      "methodName": "google.devtools.artifactregistry.v1.ArtifactRegistry.SetIamPolicy",
+      "authorizationInfo": [
+        {
+          "resource": "projects/elegant-weaver-435322-v8/locations/us-east1/repositories/artifact-repo",
+          "permission": "artifactregistry.repositories.setIamPolicy",
+          "granted": true,
+          "resourceAttributes": {},
+          "permissionType": "ADMIN_WRITE"
+        }
+      ],
+      "resourceName": "projects/elegant-weaver-435322-v8/locations/us-east1/repositories/artifact-repo",
+      "request": {
+        "resource": "projects/elegant-weaver-435322-v8/locations/us-east1/repositories/artifact-repo",
+        "@type": "type.googleapis.com/google.iam.v1.SetIamPolicyRequest"
+      }
+    },
+    "insertId": "7i6gx0d2i7u",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "project_id": "elegant-weaver-435322-v8",
+        "service": "artifactregistry.googleapis.com",
+        "method": "google.devtools.artifactregistry.v1.ArtifactRegistry.SetIamPolicy"
+      }
+    },
+    "timestamp": "2024-11-01T19:46:40.629227175Z",
+    "severity": "ERROR",
+    "logName": "projects/elegant-weaver-435322-v8/logs/cloudaudit.googleapis.com%2Factivity",
+    "receiveTimestamp": "2024-11-01T19:46:41.350795227Z"
+  },
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "status": {
+        "code": 6,
+        "message": "Requested entity already exists"
+      },
+      "authenticationInfo": {
+        "principalEmail": "hwalker5987@gmail.com",
+        "principalSubject": "user:hwalker5987@gmail.com"
+      },
+      "requestMetadata": {
+        "callerIp": "34.148.159.166",
+        "callerSuppliedUserAgent": "google-cloud-sdk gcloud/499.0.0 command/gcloud.iam.workload-identity-pools.create invocation-id/0a485eccf0614d40969eb280b9e6cdbc environment/devshell environment-version/None client-os/LINUX client-os-ver/6.1.112 client-pltf-arch/x86_64 interactive/True from-script/False python/3.11.9 term/screen (Linux 6.1.112+),gzip(gfe)",
+        "requestAttributes": {
+          "time": "2024-11-01T19:48:47.806777794Z",
+          "auth": {}
+        },
+        "destinationAttributes": {}
+      },
+      "serviceName": "iam.googleapis.com",
+      "methodName": "google.iam.v1.WorkloadIdentityPools.CreateWorkloadIdentityPool",
+      "authorizationInfo": [
+        {
+          "resource": "projects/elegant-weaver-435322-v8/locations/global",
+          "permission": "iam.workloadIdentityPools.create",
+          "granted": true,
+          "resourceAttributes": {},
+          "permissionType": "ADMIN_WRITE"
+        }
+      ],
+      "resourceName": "projects/elegant-weaver-435322-v8/locations/global",
+      "request": {
+        "workloadIdentityPoolId": "github",
+        "parent": "projects/elegant-weaver-435322-v8/locations/global",
+        "@type": "type.googleapis.com/google.iam.v1.CreateWorkloadIdentityPoolRequest",
+        "workloadIdentityPool": {
+          "disabled": false,
+          "displayName": "GitHub Actions Pool"
+        }
+      },
+      "resourceLocation": {
+        "currentLocations": [
+          "global"
+        ]
+      }
+    },
+    "insertId": "s1nzdld9by0",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "project_id": "elegant-weaver-435322-v8",
+        "method": "google.iam.v1.WorkloadIdentityPools.CreateWorkloadIdentityPool",
+        "service": "iam.googleapis.com"
+      }
+    },
+    "timestamp": "2024-11-01T19:48:47.798025470Z",
+    "severity": "ERROR",
+    "logName": "projects/elegant-weaver-435322-v8/logs/cloudaudit.googleapis.com%2Factivity",
+    "receiveTimestamp": "2024-11-01T19:48:48.376854798Z"
+  },
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "status": {
+        "code": 6,
+        "message": "Requested entity already exists"
+      },
+      "authenticationInfo": {
+        "principalEmail": "hwalker5987@gmail.com",
+        "principalSubject": "user:hwalker5987@gmail.com"
+      },
+      "requestMetadata": {
+        "callerIp": "34.148.159.166",
+        "callerSuppliedUserAgent": "google-cloud-sdk gcloud/499.0.0 command/gcloud.iam.workload-identity-pools.providers.create-oidc invocation-id/e6eb648ca12a4f3f9d4bc0d85748a55d environment/devshell environment-version/None client-os/LINUX client-os-ver/6.1.112 client-pltf-arch/x86_64 interactive/True from-script/False python/3.11.9 term/screen (Linux 6.1.112+),gzip(gfe)",
+        "requestAttributes": {
+          "time": "2024-11-01T19:50:58.829643277Z",
+          "auth": {}
+        },
+        "destinationAttributes": {}
+      },
+      "serviceName": "iam.googleapis.com",
+      "methodName": "google.iam.v1.WorkloadIdentityPools.CreateWorkloadIdentityPoolProvider",
+      "authorizationInfo": [
+        {
+          "resource": "projects/elegant-weaver-435322-v8/locations/global/workloadIdentityPools/github",
+          "permission": "iam.workloadIdentityPoolProviders.create",
+          "granted": true,
+          "resourceAttributes": {},
+          "permissionType": "ADMIN_WRITE"
+        }
+      ],
+      "resourceName": "projects/elegant-weaver-435322-v8/locations/global/workloadIdentityPools/github",
+      "request": {
+        "workloadIdentityPoolProvider": {
+          "oidc": {
+            "issuerUri": "https://token.actions.githubusercontent.com"
+          },
+          "disabled": false,
+          "displayName": "My GitHub repo Provider",
+          "attributeMapping": {
+            "google.subject": "assertion.sub",
+            "attribute.repository_owner": "assertion.repository_owner",
+            "attribute.repository": "assertion.repository",
+            "attribute.actor": "assertion.actor"
+          },
+          "attributeCondition": "assertion.repository_owner == 'pitt-cs-1660'"
+        },
+        "workloadIdentityPoolProviderId": "my-repo",
+        "parent": "projects/elegant-weaver-435322-v8/locations/global/workloadIdentityPools/github",
+        "@type": "type.googleapis.com/google.iam.v1.CreateWorkloadIdentityPoolProviderRequest"
+      },
+      "resourceLocation": {
+        "currentLocations": [
+          "global"
+        ]
+      }
+    },
+    "insertId": "n1ylxfdc17c",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "project_id": "elegant-weaver-435322-v8",
+        "service": "iam.googleapis.com",
+        "method": "google.iam.v1.WorkloadIdentityPools.CreateWorkloadIdentityPoolProvider"
+      }
+    },
+    "timestamp": "2024-11-01T19:50:58.795863690Z",
+    "severity": "ERROR",
+    "logName": "projects/elegant-weaver-435322-v8/logs/cloudaudit.googleapis.com%2Factivity",
+    "receiveTimestamp": "2024-11-01T19:50:59.188684041Z"
+  },
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "authenticationInfo": {
+        "principalEmail": "hwalker5987@gmail.com",
+        "principalSubject": "user:hwalker5987@gmail.com"
+      },
+      "requestMetadata": {
+        "callerIp": "34.148.159.166",
+        "callerSuppliedUserAgent": "google-cloud-sdk gcloud/499.0.0 command/gcloud.secrets.add-iam-policy-binding invocation-id/02a565dfc03544418f8f7a56bab5f5b9 environment/devshell environment-version/None client-os/LINUX client-os-ver/6.1.112 client-pltf-arch/x86_64 interactive/True from-script/False python/3.11.9 term/screen (Linux 6.1.112+),gzip(gfe)",
+        "requestAttributes": {
+          "time": "2024-11-01T19:54:45.593852070Z",
+          "auth": {}
+        },
+        "destinationAttributes": {}
+      },
+      "serviceName": "secretmanager.googleapis.com",
+      "methodName": "google.cloud.secretmanager.v1.SecretManagerService.SetIamPolicy",
+      "authorizationInfo": [
+        {
+          "permission": "secretmanager.secrets.setIamPolicy",
+          "granted": true,
+          "resourceAttributes": {
+            "service": "secretmanager.googleapis.com",
+            "name": "projects/186852006700/secrets/my-secret",
+            "type": "secretmanager.googleapis.com/Secret"
+          },
+          "permissionType": "ADMIN_WRITE"
+        }
+      ],
+      "resourceName": "projects/186852006700/secrets/my-secret",
+      "request": {
+        "policy": {
+          "etag": "BwYl3r7OmYo=",
+          "bindings": [
+            {
+              "role": "roles/secretmanager.secretAccessor",
+              "members": [
+                "principalSet://iam.googleapis.com/projects/186852006700/locations/global/workloadIdentityPools/github/attribute.repository/pitt-cs-1660/build-and-push-image-HWalk59",
+                "principalSet://iam.googleapis.com/projects/186852006700/locations/global/workloadIdentityPools/github/attribute.repository/pitt-cs-1660"
+              ]
+            }
+          ]
+        },
+        "resource": "projects/elegant-weaver-435322-v8/secrets/my-secret",
+        "@type": "type.googleapis.com/google.iam.v1.SetIamPolicyRequest"
+      },
+      "response": {
+        "@type": "type.googleapis.com/google.iam.v1.Policy",
+        "etag": "BwYl306FczA=",
+        "bindings": [
+          {
+            "members": [
+              "principalSet://iam.googleapis.com/projects/186852006700/locations/global/workloadIdentityPools/github/attribute.repository/pitt-cs-1660",
+              "principalSet://iam.googleapis.com/projects/186852006700/locations/global/workloadIdentityPools/github/attribute.repository/pitt-cs-1660/build-and-push-image-HWalk59"
+            ],
+            "role": "roles/secretmanager.secretAccessor"
+          }
+        ]
+      }
+    },
+    "insertId": "uk76me1gzzr",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "service": "secretmanager.googleapis.com",
+        "method": "google.cloud.secretmanager.v1.SecretManagerService.SetIamPolicy",
+        "project_id": "elegant-weaver-435322-v8"
+      }
+    },
+    "timestamp": "2024-11-01T19:54:45.005840388Z",
+    "severity": "NOTICE",
+    "logName": "projects/elegant-weaver-435322-v8/logs/cloudaudit.googleapis.com%2Factivity",
+    "receiveTimestamp": "2024-11-01T19:54:45.872150305Z"
+  },
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "status": {
+        "code": 3,
+        "message": "Invalid principalSet member (principalSet://iam.googleapis.com/projects/186852006700/locations/global/workloadIdentityPools/github/subjects/pitt-cs-1660)."
+      },
+      "authenticationInfo": {
+        "principalEmail": "hwalker5987@gmail.com",
+        "principalSubject": "user:hwalker5987@gmail.com"
+      },
+      "requestMetadata": {
+        "callerIp": "34.148.159.166",
+        "callerSuppliedUserAgent": "google-cloud-sdk gcloud/499.0.0 command/gcloud.artifacts.repositories.add-iam-policy-binding invocation-id/23d5f9172494485a974fbc7a3849b76a environment/devshell environment-version/None client-os/LINUX client-os-ver/6.1.112 client-pltf-arch/x86_64 interactive/True from-script/False python/3.11.9 term/screen (Linux 6.1.112+),gzip(gfe),gzip(gfe)",
+        "requestAttributes": {
+          "time": "2024-11-01T20:02:10.849968688Z",
+          "auth": {}
+        },
+        "destinationAttributes": {}
+      },
+      "serviceName": "artifactregistry.googleapis.com",
+      "methodName": "google.devtools.artifactregistry.v1.ArtifactRegistry.SetIamPolicy",
+      "authorizationInfo": [
+        {
+          "resource": "projects/elegant-weaver-435322-v8/locations/us-east1/repositories/artifact-repo",
+          "permission": "artifactregistry.repositories.setIamPolicy",
+          "granted": true,
+          "resourceAttributes": {},
+          "permissionType": "ADMIN_WRITE"
+        }
+      ],
+      "resourceName": "projects/elegant-weaver-435322-v8/locations/us-east1/repositories/artifact-repo",
+      "request": {
+        "@type": "type.googleapis.com/google.iam.v1.SetIamPolicyRequest",
+        "resource": "projects/elegant-weaver-435322-v8/locations/us-east1/repositories/artifact-repo"
+      }
+    },
+    "insertId": "mibg1vd2ixt",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "service": "artifactregistry.googleapis.com",
+        "method": "google.devtools.artifactregistry.v1.ArtifactRegistry.SetIamPolicy",
+        "project_id": "elegant-weaver-435322-v8"
+      }
+    },
+    "timestamp": "2024-11-01T20:02:10.840445858Z",
+    "severity": "ERROR",
+    "logName": "projects/elegant-weaver-435322-v8/logs/cloudaudit.googleapis.com%2Factivity",
+    "receiveTimestamp": "2024-11-01T20:02:11.258827613Z"
+  },
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "authenticationInfo": {
+        "principalEmail": "hwalker5987@gmail.com",
+        "principalSubject": "user:hwalker5987@gmail.com"
+      },
+      "requestMetadata": {
+        "callerIp": "34.148.159.166",
+        "callerSuppliedUserAgent": "google-cloud-sdk gcloud/499.0.0 command/gcloud.secrets.add-iam-policy-binding invocation-id/5de84db73db649cc8b89779aec59ca67 environment/devshell environment-version/None client-os/LINUX client-os-ver/6.1.112 client-pltf-arch/x86_64 interactive/True from-script/False python/3.11.9 term/screen (Linux 6.1.112+),gzip(gfe)",
+        "requestAttributes": {
+          "time": "2024-11-01T20:05:25.174380476Z",
+          "auth": {}
+        },
+        "destinationAttributes": {}
+      },
+      "serviceName": "secretmanager.googleapis.com",
+      "methodName": "google.cloud.secretmanager.v1.SecretManagerService.SetIamPolicy",
+      "authorizationInfo": [
+        {
+          "permission": "secretmanager.secrets.setIamPolicy",
+          "granted": true,
+          "resourceAttributes": {
+            "service": "secretmanager.googleapis.com",
+            "name": "projects/186852006700/secrets/my-secret",
+            "type": "secretmanager.googleapis.com/Secret"
+          },
+          "permissionType": "ADMIN_WRITE"
+        }
+      ],
+      "resourceName": "projects/186852006700/secrets/my-secret",
+      "request": {
+        "policy": {
+          "etag": "BwYl306FczA=",
+          "bindings": [
+            {
+              "members": [
+                "principalSet://iam.googleapis.com/projects/186852006700/locations/global/workloadIdentityPools/github/attribute.repository/pitt-cs-1660",
+                "principalSet://iam.googleapis.com/projects/186852006700/locations/global/workloadIdentityPools/github/attribute.repository/pitt-cs-1660/build-and-push-image-HWalk59"
+              ],
+              "role": "roles/secretmanager.secretAccessor"
+            }
+          ]
+        },
+        "@type": "type.googleapis.com/google.iam.v1.SetIamPolicyRequest",
+        "resource": "projects/elegant-weaver-435322-v8/secrets/my-secret"
+      },
+      "response": {
+        "@type": "type.googleapis.com/google.iam.v1.Policy",
+        "etag": "BwYl33Skmtw=",
+        "bindings": [
+          {
+            "members": [
+              "principalSet://iam.googleapis.com/projects/186852006700/locations/global/workloadIdentityPools/github/attribute.repository/pitt-cs-1660",
+              "principalSet://iam.googleapis.com/projects/186852006700/locations/global/workloadIdentityPools/github/attribute.repository/pitt-cs-1660/build-and-push-image-HWalk59"
+            ],
+            "role": "roles/secretmanager.secretAccessor"
+          }
+        ]
+      }
+    },
+    "insertId": "akrpyae1hedt",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "service": "secretmanager.googleapis.com",
+        "project_id": "elegant-weaver-435322-v8",
+        "method": "google.cloud.secretmanager.v1.SecretManagerService.SetIamPolicy"
+      }
+    },
+    "timestamp": "2024-11-01T20:05:24.812145554Z",
+    "severity": "NOTICE",
+    "logName": "projects/elegant-weaver-435322-v8/logs/cloudaudit.googleapis.com%2Factivity",
+    "receiveTimestamp": "2024-11-01T20:05:25.796338933Z"
+  },
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "status": {
+        "code": 3,
+        "message": "Invalid principalSet member (principalSet://iam.googleapis.com/projects/186852006700/locations/global/workloadIdentityPools/github/subjects/pitt-cs-1660)."
+      },
+      "authenticationInfo": {
+        "principalEmail": "hwalker5987@gmail.com",
+        "principalSubject": "user:hwalker5987@gmail.com"
+      },
+      "requestMetadata": {
+        "callerIp": "34.148.159.166",
+        "callerSuppliedUserAgent": "google-cloud-sdk gcloud/499.0.0 command/gcloud.artifacts.repositories.add-iam-policy-binding invocation-id/85576cc308594e6986ad1a2de24fab0c environment/devshell environment-version/None client-os/LINUX client-os-ver/6.1.112 client-pltf-arch/x86_64 interactive/True from-script/False python/3.11.9 term/screen (Linux 6.1.112+),gzip(gfe),gzip(gfe)",
+        "requestAttributes": {
+          "time": "2024-11-01T20:06:12.851934485Z",
+          "auth": {}
+        },
+        "destinationAttributes": {}
+      },
+      "serviceName": "artifactregistry.googleapis.com",
+      "methodName": "google.devtools.artifactregistry.v1.ArtifactRegistry.SetIamPolicy",
+      "authorizationInfo": [
+        {
+          "resource": "projects/elegant-weaver-435322-v8/locations/us-east1/repositories/artifact-repo",
+          "permission": "artifactregistry.repositories.setIamPolicy",
+          "granted": true,
+          "resourceAttributes": {},
+          "permissionType": "ADMIN_WRITE"
+        }
+      ],
+      "resourceName": "projects/elegant-weaver-435322-v8/locations/us-east1/repositories/artifact-repo",
+      "request": {
+        "@type": "type.googleapis.com/google.iam.v1.SetIamPolicyRequest",
+        "resource": "projects/elegant-weaver-435322-v8/locations/us-east1/repositories/artifact-repo"
+      }
+    },
+    "insertId": "4gjdxkd2kv6",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "service": "artifactregistry.googleapis.com",
+        "method": "google.devtools.artifactregistry.v1.ArtifactRegistry.SetIamPolicy",
+        "project_id": "elegant-weaver-435322-v8"
+      }
+    },
+    "timestamp": "2024-11-01T20:06:12.842173955Z",
+    "severity": "ERROR",
+    "logName": "projects/elegant-weaver-435322-v8/logs/cloudaudit.googleapis.com%2Factivity",
+    "receiveTimestamp": "2024-11-01T20:06:13.083068248Z"
+  },
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "status": {
+        "code": 3,
+        "message": "Invalid principalSet member (principalSet://iam.googleapis.com/projects/186852006700/locations/global/workloadIdentityPools/github/providers/my-repo/subjects/pitt-cs-1660)."
+      },
+      "authenticationInfo": {
+        "principalEmail": "hwalker5987@gmail.com",
+        "principalSubject": "user:hwalker5987@gmail.com"
+      },
+      "requestMetadata": {
+        "callerIp": "34.148.159.166",
+        "callerSuppliedUserAgent": "google-cloud-sdk gcloud/499.0.0 command/gcloud.artifacts.repositories.add-iam-policy-binding invocation-id/46bf939f8836468c8e2134c32d041cd9 environment/devshell environment-version/None client-os/LINUX client-os-ver/6.1.112 client-pltf-arch/x86_64 interactive/True from-script/False python/3.11.9 term/screen (Linux 6.1.112+),gzip(gfe),gzip(gfe)",
+        "requestAttributes": {
+          "time": "2024-11-01T20:06:47.852211271Z",
+          "auth": {}
+        },
+        "destinationAttributes": {}
+      },
+      "serviceName": "artifactregistry.googleapis.com",
+      "methodName": "google.devtools.artifactregistry.v1.ArtifactRegistry.SetIamPolicy",
+      "authorizationInfo": [
+        {
+          "resource": "projects/elegant-weaver-435322-v8/locations/us-east1/repositories/artifact-repo",
+          "permission": "artifactregistry.repositories.setIamPolicy",
+          "granted": true,
+          "resourceAttributes": {},
+          "permissionType": "ADMIN_WRITE"
+        }
+      ],
+      "resourceName": "projects/elegant-weaver-435322-v8/locations/us-east1/repositories/artifact-repo",
+      "request": {
+        "@type": "type.googleapis.com/google.iam.v1.SetIamPolicyRequest",
+        "resource": "projects/elegant-weaver-435322-v8/locations/us-east1/repositories/artifact-repo"
+      }
+    },
+    "insertId": "mii1zrd2hx6",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "service": "artifactregistry.googleapis.com",
+        "project_id": "elegant-weaver-435322-v8",
+        "method": "google.devtools.artifactregistry.v1.ArtifactRegistry.SetIamPolicy"
+      }
+    },
+    "timestamp": "2024-11-01T20:06:47.843211711Z",
+    "severity": "ERROR",
+    "logName": "projects/elegant-weaver-435322-v8/logs/cloudaudit.googleapis.com%2Factivity",
+    "receiveTimestamp": "2024-11-01T20:06:48.228900199Z"
+  },
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "status": {
+        "code": 3,
+        "message": "Invalid principalSet member (principalSet://iam.googleapis.com/projects/186852006700/locations/global/workloadIdentityPools/github/subjects/pitt-cs-1660)."
+      },
+      "authenticationInfo": {
+        "principalEmail": "hwalker5987@gmail.com",
+        "principalSubject": "user:hwalker5987@gmail.com"
+      },
+      "requestMetadata": {
+        "callerIp": "34.148.159.166",
+        "callerSuppliedUserAgent": "google-cloud-sdk gcloud/499.0.0 command/gcloud.artifacts.repositories.add-iam-policy-binding invocation-id/6d372f86f8174d439a43014bd1458d89 environment/devshell environment-version/None client-os/LINUX client-os-ver/6.1.112 client-pltf-arch/x86_64 interactive/True from-script/False python/3.11.9 term/screen (Linux 6.1.112+),gzip(gfe),gzip(gfe)",
+        "requestAttributes": {
+          "time": "2024-11-01T20:08:46.958860534Z",
+          "auth": {}
+        },
+        "destinationAttributes": {}
+      },
+      "serviceName": "artifactregistry.googleapis.com",
+      "methodName": "google.devtools.artifactregistry.v1.ArtifactRegistry.SetIamPolicy",
+      "authorizationInfo": [
+        {
+          "resource": "projects/elegant-weaver-435322-v8/locations/us-east1/repositories/artifact-repo",
+          "permission": "artifactregistry.repositories.setIamPolicy",
+          "granted": true,
+          "resourceAttributes": {},
+          "permissionType": "ADMIN_WRITE"
+        }
+      ],
+      "resourceName": "projects/elegant-weaver-435322-v8/locations/us-east1/repositories/artifact-repo",
+      "request": {
+        "@type": "type.googleapis.com/google.iam.v1.SetIamPolicyRequest",
+        "resource": "projects/elegant-weaver-435322-v8/locations/us-east1/repositories/artifact-repo"
+      }
+    },
+    "insertId": "1v6zq5pd2l1w",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "service": "artifactregistry.googleapis.com",
+        "project_id": "elegant-weaver-435322-v8",
+        "method": "google.devtools.artifactregistry.v1.ArtifactRegistry.SetIamPolicy"
+      }
+    },
+    "timestamp": "2024-11-01T20:08:46.949736185Z",
+    "severity": "ERROR",
+    "logName": "projects/elegant-weaver-435322-v8/logs/cloudaudit.googleapis.com%2Factivity",
+    "receiveTimestamp": "2024-11-01T20:08:47.878779621Z"
+  },
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "authenticationInfo": {
+        "principalEmail": "hwalker5987@gmail.com",
+        "principalSubject": "user:hwalker5987@gmail.com"
+      },
+      "requestMetadata": {
+        "callerIp": "34.148.159.166",
+        "callerSuppliedUserAgent": "google-cloud-sdk gcloud/499.0.0 command/gcloud.artifacts.repositories.add-iam-policy-binding invocation-id/00c8112850774be39a9a7cd7e0b02483 environment/devshell environment-version/None client-os/LINUX client-os-ver/6.1.112 client-pltf-arch/x86_64 interactive/True from-script/False python/3.11.9 term/screen (Linux 6.1.112+),gzip(gfe),gzip(gfe)",
+        "requestAttributes": {
+          "time": "2024-11-01T20:10:15.535208936Z",
+          "auth": {}
+        },
+        "destinationAttributes": {}
+      },
+      "serviceName": "artifactregistry.googleapis.com",
+      "methodName": "google.devtools.artifactregistry.v1.ArtifactRegistry.SetIamPolicy",
+      "authorizationInfo": [
+        {
+          "resource": "projects/elegant-weaver-435322-v8/locations/us-east1/repositories/artifact-repo",
+          "permission": "artifactregistry.repositories.setIamPolicy",
+          "granted": true,
+          "resourceAttributes": {},
+          "permissionType": "ADMIN_WRITE"
+        }
+      ],
+      "resourceName": "projects/elegant-weaver-435322-v8/locations/us-east1/repositories/artifact-repo",
+      "request": {
+        "resource": "projects/elegant-weaver-435322-v8/locations/us-east1/repositories/artifact-repo",
+        "@type": "type.googleapis.com/google.iam.v1.SetIamPolicyRequest"
+      },
+      "response": {
+        "@type": "type.googleapis.com/google.iam.v1.Policy"
+      }
+    },
+    "insertId": "mii1zrd2i0q",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "project_id": "elegant-weaver-435322-v8",
+        "service": "artifactregistry.googleapis.com",
+        "method": "google.devtools.artifactregistry.v1.ArtifactRegistry.SetIamPolicy"
+      }
+    },
+    "timestamp": "2024-11-01T20:10:15.528557007Z",
+    "severity": "NOTICE",
+    "logName": "projects/elegant-weaver-435322-v8/logs/cloudaudit.googleapis.com%2Factivity",
+    "receiveTimestamp": "2024-11-01T20:10:16.258195480Z"
+  },
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "authenticationInfo": {
+        "principalEmail": "hwalker5987@gmail.com",
+        "principalSubject": "user:hwalker5987@gmail.com"
+      },
+      "requestMetadata": {
+        "callerIp": "34.148.159.166",
+        "callerSuppliedUserAgent": "google-cloud-sdk gcloud/499.0.0 command/gcloud.artifacts.repositories.add-iam-policy-binding invocation-id/468b32de73334aaf94dff4eca98cdb03 environment/devshell environment-version/None client-os/LINUX client-os-ver/6.1.112 client-pltf-arch/x86_64 interactive/True from-script/False python/3.11.9 term/screen (Linux 6.1.112+),gzip(gfe),gzip(gfe)",
+        "requestAttributes": {
+          "time": "2024-11-01T20:12:32.039310814Z",
+          "auth": {}
+        },
+        "destinationAttributes": {}
+      },
+      "serviceName": "artifactregistry.googleapis.com",
+      "methodName": "google.devtools.artifactregistry.v1.ArtifactRegistry.SetIamPolicy",
+      "authorizationInfo": [
+        {
+          "resource": "projects/elegant-weaver-435322-v8/locations/us-east1/repositories/artifact-repo",
+          "permission": "artifactregistry.repositories.setIamPolicy",
+          "granted": true,
+          "resourceAttributes": {},
+          "permissionType": "ADMIN_WRITE"
+        }
+      ],
+      "resourceName": "projects/elegant-weaver-435322-v8/locations/us-east1/repositories/artifact-repo",
+      "request": {
+        "@type": "type.googleapis.com/google.iam.v1.SetIamPolicyRequest",
+        "resource": "projects/elegant-weaver-435322-v8/locations/us-east1/repositories/artifact-repo"
+      },
+      "response": {
+        "@type": "type.googleapis.com/google.iam.v1.Policy"
+      }
+    },
+    "insertId": "1v6zq5pd2l5x",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "service": "artifactregistry.googleapis.com",
+        "project_id": "elegant-weaver-435322-v8",
+        "method": "google.devtools.artifactregistry.v1.ArtifactRegistry.SetIamPolicy"
+      }
+    },
+    "timestamp": "2024-11-01T20:12:32.033010514Z",
+    "severity": "NOTICE",
+    "logName": "projects/elegant-weaver-435322-v8/logs/cloudaudit.googleapis.com%2Factivity",
+    "receiveTimestamp": "2024-11-01T20:12:32.898041443Z"
+  },
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "authenticationInfo": {
+        "principalEmail": "hwalker5987@gmail.com",
+        "principalSubject": "user:hwalker5987@gmail.com"
+      },
+      "requestMetadata": {
+        "callerIp": "34.148.159.166",
+        "callerSuppliedUserAgent": "google-cloud-sdk gcloud/499.0.0 command/gcloud.artifacts.repositories.add-iam-policy-binding invocation-id/ed67b59abb6341f596333e7e522517ed environment/devshell environment-version/None client-os/LINUX client-os-ver/6.1.112 client-pltf-arch/x86_64 interactive/True from-script/False python/3.11.9 term/screen (Linux 6.1.112+),gzip(gfe),gzip(gfe)",
+        "requestAttributes": {
+          "time": "2024-11-01T20:16:46.249572086Z",
+          "auth": {}
+        },
+        "destinationAttributes": {}
+      },
+      "serviceName": "artifactregistry.googleapis.com",
+      "methodName": "google.devtools.artifactregistry.v1.ArtifactRegistry.SetIamPolicy",
+      "authorizationInfo": [
+        {
+          "resource": "projects/elegant-weaver-435322-v8/locations/us-east1/repositories/artifact-repo",
+          "permission": "artifactregistry.repositories.setIamPolicy",
+          "granted": true,
+          "resourceAttributes": {},
+          "permissionType": "ADMIN_WRITE"
+        }
+      ],
+      "resourceName": "projects/elegant-weaver-435322-v8/locations/us-east1/repositories/artifact-repo",
+      "request": {
+        "resource": "projects/elegant-weaver-435322-v8/locations/us-east1/repositories/artifact-repo",
+        "@type": "type.googleapis.com/google.iam.v1.SetIamPolicyRequest"
+      },
+      "response": {
+        "@type": "type.googleapis.com/google.iam.v1.Policy"
+      }
+    },
+    "insertId": "7ialiwd2k4u",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "project_id": "elegant-weaver-435322-v8",
+        "service": "artifactregistry.googleapis.com",
+        "method": "google.devtools.artifactregistry.v1.ArtifactRegistry.SetIamPolicy"
+      }
+    },
+    "timestamp": "2024-11-01T20:16:46.237612547Z",
+    "severity": "NOTICE",
+    "logName": "projects/elegant-weaver-435322-v8/logs/cloudaudit.googleapis.com%2Factivity",
+    "receiveTimestamp": "2024-11-01T20:16:47.425024754Z"
+  },
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "status": {},
+      "authenticationInfo": {
+        "principalEmail": "hwalker5987@gmail.com"
+      },
+      "requestMetadata": {
+        "callerIp": "2601:547:1981:aac0:7007:4e8a:cb93:6024",
+        "callerSuppliedUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:131.0) Gecko/20100101 Firefox/131.0,gzip(gfe),gzip(gfe)",
+        "requestAttributes": {},
+        "destinationAttributes": {}
+      },
+      "serviceName": "cloudresourcemanager.googleapis.com",
+      "methodName": "SetIamPolicy",
+      "authorizationInfo": [
+        {
+          "resource": "projects/elegant-weaver-435322-v8",
+          "permission": "resourcemanager.projects.setIamPolicy",
+          "granted": true,
+          "resourceAttributes": {
+            "service": "cloudresourcemanager.googleapis.com",
+            "name": "projects/elegant-weaver-435322-v8",
+            "type": "cloudresourcemanager.googleapis.com/Project"
+          },
+          "permissionType": "ADMIN_WRITE"
+        },
+        {
+          "resource": "projects/elegant-weaver-435322-v8",
+          "permission": "resourcemanager.projects.setIamPolicy",
+          "granted": true,
+          "resourceAttributes": {
+            "service": "cloudresourcemanager.googleapis.com",
+            "name": "projects/elegant-weaver-435322-v8",
+            "type": "cloudresourcemanager.googleapis.com/Project"
+          },
+          "permissionType": "ADMIN_WRITE"
+        }
+      ],
+      "resourceName": "projects/elegant-weaver-435322-v8",
+      "serviceData": {
+        "@type": "type.googleapis.com/google.iam.v1.logging.AuditData",
+        "policyDelta": {
+          "bindingDeltas": [
+            {
+              "action": "ADD",
+              "role": "roles/artifactregistry.writer",
+              "member": "user:hwalker5987@gmail.com"
+            }
+          ]
+        }
+      },
+      "request": {
+        "resource": "elegant-weaver-435322-v8",
+        "policy": {
+          "bindings": [
+            {
+              "members": [
+                "serviceAccount:service-186852006700@gcp-sa-artifactregistry.iam.gserviceaccount.com"
+              ],
+              "role": "roles/artifactregistry.serviceAgent"
+            },
+            {
+              "members": [
+                "serviceAccount:service-186852006700@compute-system.iam.gserviceaccount.com"
+              ],
+              "role": "roles/compute.serviceAgent"
+            },
+            {
+              "members": [
+                "serviceAccount:186852006700@cloudservices.gserviceaccount.com"
+              ],
+              "role": "roles/editor"
+            },
+            {
+              "members": [
+                "user:hwalker5987@gmail.com"
+              ],
+              "role": "roles/owner"
+            },
+            {
+              "role": "roles/serviceusage.serviceUsageAdmin",
+              "members": [
+                "serviceAccount:186852006700-compute@developer.gserviceaccount.com",
+                "user:hwalker5987@gmail.com"
+              ]
+            },
+            {
+              "members": [
+                "user:hwalker5987@gmail.com"
+              ],
+              "role": "roles/artifactregistry.writer"
+            }
+          ],
+          "etag": "BwYl3mqFqBA="
+        },
+        "@type": "type.googleapis.com/google.iam.v1.SetIamPolicyRequest"
+      },
+      "response": {
+        "etag": "BwYl38L6zZ4=",
+        "@type": "type.googleapis.com/google.iam.v1.Policy",
+        "bindings": [
+          {
+            "role": "roles/artifactregistry.serviceAgent",
+            "members": [
+              "serviceAccount:service-186852006700@gcp-sa-artifactregistry.iam.gserviceaccount.com"
+            ]
+          },
+          {
+            "members": [
+              "user:hwalker5987@gmail.com"
+            ],
+            "role": "roles/artifactregistry.writer"
+          },
+          {
+            "members": [
+              "serviceAccount:service-186852006700@compute-system.iam.gserviceaccount.com"
+            ],
+            "role": "roles/compute.serviceAgent"
+          },
+          {
+            "role": "roles/editor",
+            "members": [
+              "serviceAccount:186852006700@cloudservices.gserviceaccount.com"
+            ]
+          },
+          {
+            "members": [
+              "user:hwalker5987@gmail.com"
+            ],
+            "role": "roles/owner"
+          },
+          {
+            "members": [
+              "serviceAccount:186852006700-compute@developer.gserviceaccount.com",
+              "user:hwalker5987@gmail.com"
+            ],
+            "role": "roles/serviceusage.serviceUsageAdmin"
+          }
+        ]
+      }
+    },
+    "insertId": "vdd1q5e2yuq8",
+    "resource": {
+      "type": "project",
+      "labels": {
+        "project_id": "elegant-weaver-435322-v8"
+      }
+    },
+    "timestamp": "2024-11-01T20:27:18.383734Z",
+    "severity": "NOTICE",
+    "logName": "projects/elegant-weaver-435322-v8/logs/cloudaudit.googleapis.com%2Factivity",
+    "receiveTimestamp": "2024-11-01T20:27:19.937469396Z"
+  },
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "authenticationInfo": {
+        "principalEmail": "hwalker5987@gmail.com",
+        "principalSubject": "user:hwalker5987@gmail.com"
+      },
+      "requestMetadata": {
+        "callerIp": "34.148.159.166",
+        "callerSuppliedUserAgent": "google-cloud-sdk gcloud/499.0.0 command/gcloud.iam.workload-identity-pools.create invocation-id/4d365caadc7548a586d4b977d0b8761a environment/devshell environment-version/None client-os/LINUX client-os-ver/6.1.112 client-pltf-arch/x86_64 interactive/True from-script/False python/3.11.9 term/screen (Linux 6.1.112+),gzip(gfe)",
+        "requestAttributes": {
+          "time": "2024-11-01T20:48:27.508688429Z",
+          "auth": {}
+        },
+        "destinationAttributes": {}
+      },
+      "serviceName": "iam.googleapis.com",
+      "methodName": "google.iam.v1.WorkloadIdentityPools.CreateWorkloadIdentityPool",
+      "authorizationInfo": [
+        {
+          "resource": "projects/elegant-weaver-435322-v8/locations/global",
+          "permission": "iam.workloadIdentityPools.create",
+          "granted": true,
+          "resourceAttributes": {},
+          "permissionType": "ADMIN_WRITE"
+        }
+      ],
+      "resourceName": "projects/elegant-weaver-435322-v8/locations/global",
+      "request": {
+        "workloadIdentityPool": {
+          "displayName": "GitHub Actions Pool",
+          "disabled": false
+        },
+        "@type": "type.googleapis.com/google.iam.v1.CreateWorkloadIdentityPoolRequest",
+        "parent": "projects/elegant-weaver-435322-v8/locations/global",
+        "workloadIdentityPoolId": "workload-pool1"
+      },
+      "resourceLocation": {
+        "currentLocations": [
+          "global"
+        ]
+      }
+    },
+    "insertId": "w8xhawd9aoz",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "service": "iam.googleapis.com",
+        "project_id": "elegant-weaver-435322-v8",
+        "method": "google.iam.v1.WorkloadIdentityPools.CreateWorkloadIdentityPool"
+      }
+    },
+    "timestamp": "2024-11-01T20:48:27.498667055Z",
+    "severity": "NOTICE",
+    "logName": "projects/elegant-weaver-435322-v8/logs/cloudaudit.googleapis.com%2Factivity",
+    "operation": {
+      "id": "projects/186852006700/locations/global/workloadIdentityPools/workload-pool1/operations/bigarhh5ss4qmegyxtuyaaq000000000",
+      "producer": "iam.googleapis.com",
+      "first": true
+    },
+    "receiveTimestamp": "2024-11-01T20:48:29.054233035Z"
+  },
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "authenticationInfo": {
+        "principalEmail": "hwalker5987@gmail.com",
+        "principalSubject": "user:hwalker5987@gmail.com"
+      },
+      "requestMetadata": {
+        "requestAttributes": {},
+        "destinationAttributes": {}
+      },
+      "serviceName": "iam.googleapis.com",
+      "methodName": "google.iam.v1.WorkloadIdentityPools.CreateWorkloadIdentityPool",
+      "resourceName": "projects/elegant-weaver-435322-v8/locations/global",
+      "response": {
+        "name": "projects/186852006700/locations/global/workloadIdentityPools/workload-pool1/operations/bigarhh5ss4qmegyxtuyaaq000000000",
+        "@type": "type.googleapis.com/google.longrunning.Operation"
+      }
+    },
+    "insertId": "d1wl2oc13w",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "service": "iam.googleapis.com",
+        "method": "google.iam.v1.WorkloadIdentityPools.CreateWorkloadIdentityPool",
+        "project_id": "elegant-weaver-435322-v8"
+      }
+    },
+    "timestamp": "2024-11-01T20:48:28.539782Z",
+    "severity": "NOTICE",
+    "logName": "projects/elegant-weaver-435322-v8/logs/cloudaudit.googleapis.com%2Factivity",
+    "operation": {
+      "id": "projects/186852006700/locations/global/workloadIdentityPools/workload-pool1/operations/bigarhh5ss4qmegyxtuyaaq000000000",
+      "producer": "iam.googleapis.com",
+      "last": true
+    },
+    "receiveTimestamp": "2024-11-01T20:48:28.628721493Z"
+  },
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "status": {
+        "code": 6,
+        "message": "Requested entity already exists"
+      },
+      "authenticationInfo": {
+        "principalEmail": "hwalker5987@gmail.com",
+        "principalSubject": "user:hwalker5987@gmail.com"
+      },
+      "requestMetadata": {
+        "callerIp": "34.148.159.166",
+        "callerSuppliedUserAgent": "google-cloud-sdk gcloud/499.0.0 command/gcloud.iam.workload-identity-pools.create invocation-id/915b3e979b5b4523b850977293a63f67 environment/devshell environment-version/None client-os/LINUX client-os-ver/6.1.112 client-pltf-arch/x86_64 interactive/True from-script/False python/3.11.9 term/screen (Linux 6.1.112+),gzip(gfe)",
+        "requestAttributes": {
+          "time": "2024-11-01T20:53:43.973189306Z",
+          "auth": {}
+        },
+        "destinationAttributes": {}
+      },
+      "serviceName": "iam.googleapis.com",
+      "methodName": "google.iam.v1.WorkloadIdentityPools.CreateWorkloadIdentityPool",
+      "authorizationInfo": [
+        {
+          "resource": "projects/elegant-weaver-435322-v8/locations/global",
+          "permission": "iam.workloadIdentityPools.create",
+          "granted": true,
+          "resourceAttributes": {},
+          "permissionType": "ADMIN_WRITE"
+        }
+      ],
+      "resourceName": "projects/elegant-weaver-435322-v8/locations/global",
+      "request": {
+        "parent": "projects/elegant-weaver-435322-v8/locations/global",
+        "@type": "type.googleapis.com/google.iam.v1.CreateWorkloadIdentityPoolRequest",
+        "workloadIdentityPoolId": "github",
+        "workloadIdentityPool": {
+          "disabled": false,
+          "displayName": "GitHub Actions Pool"
+        }
+      },
+      "resourceLocation": {
+        "currentLocations": [
+          "global"
+        ]
+      }
+    },
+    "insertId": "1y90j3pdcq6e",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "method": "google.iam.v1.WorkloadIdentityPools.CreateWorkloadIdentityPool",
+        "project_id": "elegant-weaver-435322-v8",
+        "service": "iam.googleapis.com"
+      }
+    },
+    "timestamp": "2024-11-01T20:53:43.965160346Z",
+    "severity": "ERROR",
+    "logName": "projects/elegant-weaver-435322-v8/logs/cloudaudit.googleapis.com%2Factivity",
+    "receiveTimestamp": "2024-11-01T20:53:44.329532235Z"
+  },
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "authenticationInfo": {
+        "principalEmail": "hwalker5987@gmail.com",
+        "principalSubject": "user:hwalker5987@gmail.com"
+      },
+      "requestMetadata": {
+        "callerIp": "34.148.159.166",
+        "callerSuppliedUserAgent": "google-cloud-sdk gcloud/499.0.0 command/gcloud.iam.workload-identity-pools.providers.create-oidc invocation-id/016145da73d249b694bea1db473f8f41 environment/devshell environment-version/None client-os/LINUX client-os-ver/6.1.112 client-pltf-arch/x86_64 interactive/True from-script/False python/3.11.9 term/screen (Linux 6.1.112+),gzip(gfe)",
+        "requestAttributes": {
+          "time": "2024-11-01T20:55:17.028411126Z",
+          "auth": {}
+        },
+        "destinationAttributes": {}
+      },
+      "serviceName": "iam.googleapis.com",
+      "methodName": "google.iam.v1.WorkloadIdentityPools.CreateWorkloadIdentityPoolProvider",
+      "authorizationInfo": [
+        {
+          "resource": "projects/elegant-weaver-435322-v8/locations/global/workloadIdentityPools/github",
+          "permission": "iam.workloadIdentityPoolProviders.create",
+          "granted": true,
+          "resourceAttributes": {},
+          "permissionType": "ADMIN_WRITE"
+        }
+      ],
+      "resourceName": "projects/elegant-weaver-435322-v8/locations/global/workloadIdentityPools/github",
+      "request": {
+        "workloadIdentityPoolProvider": {
+          "oidc": {
+            "issuerUri": "https://token.actions.githubusercontent.com"
+          },
+          "attributeMapping": {
+            "attribute.repository_owner": "assertion.repository_owner",
+            "attribute.actor": "assertion.actor",
+            "google.subject": "assertion.sub",
+            "attribute.repository": "assertion.repository"
+          },
+          "attributeCondition": "assertion.repository_owner == 'pitt-cs-1660'",
+          "disabled": false,
+          "displayName": "My GitHub repo Provider"
+        },
+        "parent": "projects/elegant-weaver-435322-v8/locations/global/workloadIdentityPools/github",
+        "@type": "type.googleapis.com/google.iam.v1.CreateWorkloadIdentityPoolProviderRequest",
+        "workloadIdentityPoolProviderId": "github-actions-provider"
+      },
+      "resourceLocation": {
+        "currentLocations": [
+          "global"
+        ]
+      }
+    },
+    "insertId": "s1nzdld9jxk",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "service": "iam.googleapis.com",
+        "project_id": "elegant-weaver-435322-v8",
+        "method": "google.iam.v1.WorkloadIdentityPools.CreateWorkloadIdentityPoolProvider"
+      }
+    },
+    "timestamp": "2024-11-01T20:55:17.011276742Z",
+    "severity": "NOTICE",
+    "logName": "projects/elegant-weaver-435322-v8/logs/cloudaudit.googleapis.com%2Factivity",
+    "operation": {
+      "id": "projects/186852006700/locations/global/workloadIdentityPools/github/providers/github-actions-provider/operations/bigarnmasw4qmegaycs2kaq000000000",
+      "producer": "iam.googleapis.com",
+      "first": true
+    },
+    "receiveTimestamp": "2024-11-01T20:55:18.168433989Z"
+  },
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "authenticationInfo": {
+        "principalEmail": "hwalker5987@gmail.com",
+        "principalSubject": "user:hwalker5987@gmail.com"
+      },
+      "requestMetadata": {
+        "requestAttributes": {},
+        "destinationAttributes": {}
+      },
+      "serviceName": "iam.googleapis.com",
+      "methodName": "google.iam.v1.WorkloadIdentityPools.CreateWorkloadIdentityPoolProvider",
+      "resourceName": "projects/elegant-weaver-435322-v8/locations/global/workloadIdentityPools/github",
+      "response": {
+        "@type": "type.googleapis.com/google.longrunning.Operation",
+        "name": "projects/186852006700/locations/global/workloadIdentityPools/github/providers/github-actions-provider/operations/bigarnmasw4qmegaycs2kaq000000000"
+      }
+    },
+    "insertId": "yorj19brp",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "project_id": "elegant-weaver-435322-v8",
+        "method": "google.iam.v1.WorkloadIdentityPools.CreateWorkloadIdentityPoolProvider",
+        "service": "iam.googleapis.com"
+      }
+    },
+    "timestamp": "2024-11-01T20:55:17.616238Z",
+    "severity": "NOTICE",
+    "logName": "projects/elegant-weaver-435322-v8/logs/cloudaudit.googleapis.com%2Factivity",
+    "operation": {
+      "id": "projects/186852006700/locations/global/workloadIdentityPools/github/providers/github-actions-provider/operations/bigarnmasw4qmegaycs2kaq000000000",
+      "producer": "iam.googleapis.com",
+      "last": true
+    },
+    "receiveTimestamp": "2024-11-01T20:55:17.759577563Z"
+  },
+  {
+    "insertId": "1s5ggu9djg18",
+    "jsonPayload": {
+      "location": "global",
+      "status": "ACTIVE",
+      "ipUtilizationInfo": {
+        "subnetIpUtilization": [
+          {
+            "allocationRatio": 0.00024437927663734115,
+            "subnetUri": "//compute.googleapis.com/projects/elegant-weaver-435322-v8/regions/us-central1/subnetworks/default"
+          }
+        ]
+      },
+      "firstReportTime": "2024-09-14T20:59:27.300519451Z",
+      "causeCode": "IP_UTILIZATION_IP_ALLOCATION_SUMMARY",
+      "priority": "LOW",
+      "resourceName": "//compute.googleapis.com/projects/elegant-weaver-435322-v8",
+      "@type": "type.googleapis.com/google.cloud.networkanalyzer.logging.v1.Report",
+      "id": "elegant-weaver-435322-v8/ip_utilization/5790562895332074466",
+      "reportGroups": [
+        "VPC_NETWORK"
+      ],
+      "type": "INFO"
+    },
+    "resource": {
+      "type": "networking.googleapis.com/Location",
+      "labels": {
+        "location": "global",
+        "project_id": "elegant-weaver-435322-v8"
+      }
+    },
+    "timestamp": "2024-11-01T20:59:27.380184443Z",
+    "logName": "projects/elegant-weaver-435322-v8/logs/networkanalyzer.googleapis.com%2Fanalyzer_reports",
+    "receiveTimestamp": "2024-11-01T20:59:28.113276790Z"
+  },
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "status": {},
+      "authenticationInfo": {
+        "principalEmail": "hwalker5987@gmail.com"
+      },
+      "requestMetadata": {
+        "callerIp": "2601:547:1981:aac0:7007:4e8a:cb93:6024",
+        "callerSuppliedUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:131.0) Gecko/20100101 Firefox/131.0,gzip(gfe),gzip(gfe)",
+        "requestAttributes": {},
+        "destinationAttributes": {}
+      },
+      "serviceName": "cloudresourcemanager.googleapis.com",
+      "methodName": "SetIamPolicy",
+      "authorizationInfo": [
+        {
+          "resource": "projects/elegant-weaver-435322-v8",
+          "permission": "resourcemanager.projects.setIamPolicy",
+          "granted": true,
+          "resourceAttributes": {
+            "service": "cloudresourcemanager.googleapis.com",
+            "name": "projects/elegant-weaver-435322-v8",
+            "type": "cloudresourcemanager.googleapis.com/Project"
+          },
+          "permissionType": "ADMIN_WRITE"
+        },
+        {
+          "resource": "projects/elegant-weaver-435322-v8",
+          "permission": "resourcemanager.projects.setIamPolicy",
+          "granted": true,
+          "resourceAttributes": {
+            "service": "cloudresourcemanager.googleapis.com",
+            "name": "projects/elegant-weaver-435322-v8",
+            "type": "cloudresourcemanager.googleapis.com/Project"
+          },
+          "permissionType": "ADMIN_WRITE"
+        }
+      ],
+      "resourceName": "projects/elegant-weaver-435322-v8",
+      "serviceData": {
+        "@type": "type.googleapis.com/google.iam.v1.logging.AuditData",
+        "policyDelta": {
+          "bindingDeltas": [
+            {
+              "action": "ADD",
+              "role": "roles/artifactregistry.reader",
+              "member": "user:hwalker5987@gmail.com"
+            }
+          ]
+        }
+      },
+      "request": {
+        "resource": "elegant-weaver-435322-v8",
+        "policy": {
+          "etag": "BwYl38L6zZ4=",
+          "bindings": [
+            {
+              "members": [
+                "serviceAccount:service-186852006700@gcp-sa-artifactregistry.iam.gserviceaccount.com"
+              ],
+              "role": "roles/artifactregistry.serviceAgent"
+            },
+            {
+              "role": "roles/artifactregistry.writer",
+              "members": [
+                "user:hwalker5987@gmail.com"
+              ]
+            },
+            {
+              "members": [
+                "serviceAccount:service-186852006700@compute-system.iam.gserviceaccount.com"
+              ],
+              "role": "roles/compute.serviceAgent"
+            },
+            {
+              "members": [
+                "serviceAccount:186852006700@cloudservices.gserviceaccount.com"
+              ],
+              "role": "roles/editor"
+            },
+            {
+              "members": [
+                "user:hwalker5987@gmail.com"
+              ],
+              "role": "roles/owner"
+            },
+            {
+              "members": [
+                "serviceAccount:186852006700-compute@developer.gserviceaccount.com",
+                "user:hwalker5987@gmail.com"
+              ],
+              "role": "roles/serviceusage.serviceUsageAdmin"
+            },
+            {
+              "members": [
+                "user:hwalker5987@gmail.com"
+              ],
+              "role": "roles/artifactregistry.reader"
+            }
+          ]
+        },
+        "@type": "type.googleapis.com/google.iam.v1.SetIamPolicyRequest"
+      },
+      "response": {
+        "@type": "type.googleapis.com/google.iam.v1.Policy",
+        "bindings": [
+          {
+            "members": [
+              "user:hwalker5987@gmail.com"
+            ],
+            "role": "roles/artifactregistry.reader"
+          },
+          {
+            "members": [
+              "serviceAccount:service-186852006700@gcp-sa-artifactregistry.iam.gserviceaccount.com"
+            ],
+            "role": "roles/artifactregistry.serviceAgent"
+          },
+          {
+            "role": "roles/artifactregistry.writer",
+            "members": [
+              "user:hwalker5987@gmail.com"
+            ]
+          },
+          {
+            "members": [
+              "serviceAccount:service-186852006700@compute-system.iam.gserviceaccount.com"
+            ],
+            "role": "roles/compute.serviceAgent"
+          },
+          {
+            "members": [
+              "serviceAccount:186852006700@cloudservices.gserviceaccount.com"
+            ],
+            "role": "roles/editor"
+          },
+          {
+            "members": [
+              "user:hwalker5987@gmail.com"
+            ],
+            "role": "roles/owner"
+          },
+          {
+            "role": "roles/serviceusage.serviceUsageAdmin",
+            "members": [
+              "serviceAccount:186852006700-compute@developer.gserviceaccount.com",
+              "user:hwalker5987@gmail.com"
+            ]
+          }
+        ],
+        "etag": "BwYl4SIzE8c="
+      }
+    },
+    "insertId": "qp6dgje306d8",
+    "resource": {
+      "type": "project",
+      "labels": {
+        "project_id": "elegant-weaver-435322-v8"
+      }
+    },
+    "timestamp": "2024-11-01T22:05:31.020044Z",
+    "severity": "NOTICE",
+    "logName": "projects/elegant-weaver-435322-v8/logs/cloudaudit.googleapis.com%2Factivity",
+    "receiveTimestamp": "2024-11-01T22:05:32.424312154Z"
+  },
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "authenticationInfo": {
+        "principalEmail": "hwalker5987@gmail.com",
+        "principalSubject": "user:hwalker5987@gmail.com"
+      },
+      "requestMetadata": {
+        "callerIp": "35.231.143.131",
+        "callerSuppliedUserAgent": "google-cloud-sdk gcloud/499.0.0 command/gcloud.secrets.add-iam-policy-binding invocation-id/baec9e099d034e52b8d7ad9d877c09e2 environment/devshell environment-version/None client-os/LINUX client-os-ver/6.1.112 client-pltf-arch/x86_64 interactive/True from-script/False python/3.11.9 term/screen (Linux 6.1.112+),gzip(gfe)",
+        "requestAttributes": {
+          "time": "2024-11-01T22:08:09.048078261Z",
+          "auth": {}
+        },
+        "destinationAttributes": {}
+      },
+      "serviceName": "secretmanager.googleapis.com",
+      "methodName": "google.cloud.secretmanager.v1.SecretManagerService.SetIamPolicy",
+      "authorizationInfo": [
+        {
+          "permission": "secretmanager.secrets.setIamPolicy",
+          "granted": true,
+          "resourceAttributes": {
+            "service": "secretmanager.googleapis.com",
+            "name": "projects/186852006700/secrets/my-secret",
+            "type": "secretmanager.googleapis.com/Secret"
+          },
+          "permissionType": "ADMIN_WRITE"
+        }
+      ],
+      "resourceName": "projects/186852006700/secrets/my-secret",
+      "request": {
+        "@type": "type.googleapis.com/google.iam.v1.SetIamPolicyRequest",
+        "policy": {
+          "bindings": [
+            {
+              "role": "roles/secretmanager.secretAccessor",
+              "members": [
+                "principalSet://iam.googleapis.com/projects/186852006700/locations/global/workloadIdentityPools/github/attribute.repository/pitt-cs-1660",
+                "principalSet://iam.googleapis.com/projects/186852006700/locations/global/workloadIdentityPools/github/attribute.repository/pitt-cs-1660/build-and-push-image-HWalk59"
+              ]
+            }
+          ],
+          "etag": "BwYl33Skmtw="
+        },
+        "resource": "projects/elegant-weaver-435322-v8/secrets/my-secret"
+      },
+      "response": {
+        "bindings": [
+          {
+            "members": [
+              "principalSet://iam.googleapis.com/projects/186852006700/locations/global/workloadIdentityPools/github/attribute.repository/pitt-cs-1660",
+              "principalSet://iam.googleapis.com/projects/186852006700/locations/global/workloadIdentityPools/github/attribute.repository/pitt-cs-1660/build-and-push-image-HWalk59"
+            ],
+            "role": "roles/secretmanager.secretAccessor"
+          }
+        ],
+        "@type": "type.googleapis.com/google.iam.v1.Policy",
+        "etag": "BwYl4SuQdLY="
+      }
+    },
+    "insertId": "11hn9ege1m50g",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "service": "secretmanager.googleapis.com",
+        "method": "google.cloud.secretmanager.v1.SecretManagerService.SetIamPolicy",
+        "project_id": "elegant-weaver-435322-v8"
+      }
+    },
+    "timestamp": "2024-11-01T22:08:08.427456977Z",
+    "severity": "NOTICE",
+    "logName": "projects/elegant-weaver-435322-v8/logs/cloudaudit.googleapis.com%2Factivity",
+    "receiveTimestamp": "2024-11-01T22:08:09.164056764Z"
+  },
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "authenticationInfo": {
+        "principalEmail": "hwalker5987@gmail.com",
+        "principalSubject": "user:hwalker5987@gmail.com"
+      },
+      "requestMetadata": {
+        "callerIp": "35.231.143.131",
+        "callerSuppliedUserAgent": "google-cloud-sdk gcloud/499.0.0 command/gcloud.artifacts.repositories.add-iam-policy-binding invocation-id/fcf5ad89aeb043d4b966c50afbfae164 environment/devshell environment-version/None client-os/LINUX client-os-ver/6.1.112 client-pltf-arch/x86_64 interactive/True from-script/False python/3.11.9 term/screen (Linux 6.1.112+),gzip(gfe),gzip(gfe)",
+        "requestAttributes": {
+          "time": "2024-11-01T22:11:30.049475009Z",
+          "auth": {}
+        },
+        "destinationAttributes": {}
+      },
+      "serviceName": "artifactregistry.googleapis.com",
+      "methodName": "google.devtools.artifactregistry.v1.ArtifactRegistry.SetIamPolicy",
+      "authorizationInfo": [
+        {
+          "resource": "projects/elegant-weaver-435322-v8/locations/us-east1/repositories/artifact-repo",
+          "permission": "artifactregistry.repositories.setIamPolicy",
+          "granted": true,
+          "resourceAttributes": {},
+          "permissionType": "ADMIN_WRITE"
+        }
+      ],
+      "resourceName": "projects/elegant-weaver-435322-v8/locations/us-east1/repositories/artifact-repo",
+      "request": {
+        "resource": "projects/elegant-weaver-435322-v8/locations/us-east1/repositories/artifact-repo",
+        "@type": "type.googleapis.com/google.iam.v1.SetIamPolicyRequest"
+      },
+      "response": {
+        "@type": "type.googleapis.com/google.iam.v1.Policy"
+      }
+    },
+    "insertId": "10nlg65d2lwa",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "service": "artifactregistry.googleapis.com",
+        "project_id": "elegant-weaver-435322-v8",
+        "method": "google.devtools.artifactregistry.v1.ArtifactRegistry.SetIamPolicy"
+      }
+    },
+    "timestamp": "2024-11-01T22:11:30.041523640Z",
+    "severity": "NOTICE",
+    "logName": "projects/elegant-weaver-435322-v8/logs/cloudaudit.googleapis.com%2Factivity",
+    "receiveTimestamp": "2024-11-01T22:11:31.291021125Z"
+  },
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "status": {
+        "code": 6,
+        "message": "Requested entity already exists"
+      },
+      "authenticationInfo": {
+        "principalEmail": "hwalker5987@gmail.com",
+        "principalSubject": "user:hwalker5987@gmail.com"
+      },
+      "requestMetadata": {
+        "callerIp": "35.231.143.131",
+        "callerSuppliedUserAgent": "google-cloud-sdk gcloud/499.0.0 command/gcloud.iam.workload-identity-pools.providers.create-oidc invocation-id/0f42a98fb55f4f66969c731d4a85908c environment/devshell environment-version/None client-os/LINUX client-os-ver/6.1.112 client-pltf-arch/x86_64 interactive/True from-script/False python/3.11.9 term/screen (Linux 6.1.112+),gzip(gfe)",
+        "requestAttributes": {
+          "time": "2024-11-01T22:13:53.124894773Z",
+          "auth": {}
+        },
+        "destinationAttributes": {}
+      },
+      "serviceName": "iam.googleapis.com",
+      "methodName": "google.iam.v1.WorkloadIdentityPools.CreateWorkloadIdentityPoolProvider",
+      "authorizationInfo": [
+        {
+          "resource": "projects/elegant-weaver-435322-v8/locations/global/workloadIdentityPools/github",
+          "permission": "iam.workloadIdentityPoolProviders.create",
+          "granted": true,
+          "resourceAttributes": {},
+          "permissionType": "ADMIN_WRITE"
+        }
+      ],
+      "resourceName": "projects/elegant-weaver-435322-v8/locations/global/workloadIdentityPools/github",
+      "request": {
+        "workloadIdentityPoolProviderId": "my-repo",
+        "parent": "projects/elegant-weaver-435322-v8/locations/global/workloadIdentityPools/github",
+        "@type": "type.googleapis.com/google.iam.v1.CreateWorkloadIdentityPoolProviderRequest",
+        "workloadIdentityPoolProvider": {
+          "displayName": "My GitHub repo Provider",
+          "attributeCondition": "assertion.repository_owner == 'pitt-cs-1660'",
+          "attributeMapping": {
+            "attribute.repository_owner": "assertion.repository_owner",
+            "attribute.actor": "assertion.actor",
+            "google.subject": "assertion.sub",
+            "attribute.repository": "assertion.repository"
+          },
+          "oidc": {
+            "issuerUri": "https://token.actions.githubusercontent.com"
+          },
+          "disabled": false
+        }
+      },
+      "resourceLocation": {
+        "currentLocations": [
+          "global"
+        ]
+      }
+    },
+    "insertId": "5uomi9dcgci",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "method": "google.iam.v1.WorkloadIdentityPools.CreateWorkloadIdentityPoolProvider",
+        "project_id": "elegant-weaver-435322-v8",
+        "service": "iam.googleapis.com"
+      }
+    },
+    "timestamp": "2024-11-01T22:13:53.097169859Z",
+    "severity": "ERROR",
+    "logName": "projects/elegant-weaver-435322-v8/logs/cloudaudit.googleapis.com%2Factivity",
+    "receiveTimestamp": "2024-11-01T22:13:53.750659068Z"
+  },
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "authenticationInfo": {
+        "principalEmail": "hwalker5987@gmail.com",
+        "principalSubject": "user:hwalker5987@gmail.com"
+      },
+      "requestMetadata": {
+        "callerIp": "35.231.143.131",
+        "callerSuppliedUserAgent": "google-cloud-sdk gcloud/499.0.0 command/gcloud.artifacts.repositories.add-iam-policy-binding invocation-id/fa1779b510de438faf02382181b6760a environment/devshell environment-version/None client-os/LINUX client-os-ver/6.1.112 client-pltf-arch/x86_64 interactive/True from-script/False python/3.11.9 term/screen (Linux 6.1.112+),gzip(gfe),gzip(gfe)",
+        "requestAttributes": {
+          "time": "2024-11-01T22:15:52.973912685Z",
+          "auth": {}
+        },
+        "destinationAttributes": {}
+      },
+      "serviceName": "artifactregistry.googleapis.com",
+      "methodName": "google.devtools.artifactregistry.v1.ArtifactRegistry.SetIamPolicy",
+      "authorizationInfo": [
+        {
+          "resource": "projects/elegant-weaver-435322-v8/locations/us-east1/repositories/artifact-repo",
+          "permission": "artifactregistry.repositories.setIamPolicy",
+          "granted": true,
+          "resourceAttributes": {},
+          "permissionType": "ADMIN_WRITE"
+        }
+      ],
+      "resourceName": "projects/elegant-weaver-435322-v8/locations/us-east1/repositories/artifact-repo",
+      "request": {
+        "@type": "type.googleapis.com/google.iam.v1.SetIamPolicyRequest",
+        "resource": "projects/elegant-weaver-435322-v8/locations/us-east1/repositories/artifact-repo"
+      },
+      "response": {
+        "@type": "type.googleapis.com/google.iam.v1.Policy"
+      }
+    },
+    "insertId": "1v5fbfid2lc9",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "method": "google.devtools.artifactregistry.v1.ArtifactRegistry.SetIamPolicy",
+        "project_id": "elegant-weaver-435322-v8",
+        "service": "artifactregistry.googleapis.com"
+      }
+    },
+    "timestamp": "2024-11-01T22:15:52.964689856Z",
+    "severity": "NOTICE",
+    "logName": "projects/elegant-weaver-435322-v8/logs/cloudaudit.googleapis.com%2Factivity",
+    "receiveTimestamp": "2024-11-01T22:15:53.600622578Z"
+  },
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "authenticationInfo": {
+        "principalEmail": "hwalker5987@gmail.com",
+        "principalSubject": "user:hwalker5987@gmail.com"
+      },
+      "requestMetadata": {
+        "callerIp": "35.231.143.131",
+        "callerSuppliedUserAgent": "google-cloud-sdk gcloud/499.0.0 command/gcloud.artifacts.repositories.add-iam-policy-binding invocation-id/d3fe3b5f4f3349c78a315d970d0bdbb4 environment/devshell environment-version/None client-os/LINUX client-os-ver/6.1.112 client-pltf-arch/x86_64 interactive/True from-script/False python/3.11.9 term/screen (Linux 6.1.112+),gzip(gfe),gzip(gfe)",
+        "requestAttributes": {
+          "time": "2024-11-01T22:18:01.366664713Z",
+          "auth": {}
+        },
+        "destinationAttributes": {}
+      },
+      "serviceName": "artifactregistry.googleapis.com",
+      "methodName": "google.devtools.artifactregistry.v1.ArtifactRegistry.SetIamPolicy",
+      "authorizationInfo": [
+        {
+          "resource": "projects/elegant-weaver-435322-v8/locations/us-east1/repositories/artifact-repo",
+          "permission": "artifactregistry.repositories.setIamPolicy",
+          "granted": true,
+          "resourceAttributes": {},
+          "permissionType": "ADMIN_WRITE"
+        }
+      ],
+      "resourceName": "projects/elegant-weaver-435322-v8/locations/us-east1/repositories/artifact-repo",
+      "request": {
+        "@type": "type.googleapis.com/google.iam.v1.SetIamPolicyRequest",
+        "resource": "projects/elegant-weaver-435322-v8/locations/us-east1/repositories/artifact-repo"
+      },
+      "response": {
+        "@type": "type.googleapis.com/google.iam.v1.Policy"
+      }
+    },
+    "insertId": "x0oz0ld2mk7",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "service": "artifactregistry.googleapis.com",
+        "method": "google.devtools.artifactregistry.v1.ArtifactRegistry.SetIamPolicy",
+        "project_id": "elegant-weaver-435322-v8"
+      }
+    },
+    "timestamp": "2024-11-01T22:18:01.346147802Z",
+    "severity": "NOTICE",
+    "logName": "projects/elegant-weaver-435322-v8/logs/cloudaudit.googleapis.com%2Factivity",
+    "receiveTimestamp": "2024-11-01T22:18:02.144390360Z"
+  }
+]
