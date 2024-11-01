@@ -26,13 +26,14 @@ jobs:
 
       # Configure Docker to use Google Artifact Registry
       - name: gcloud Configure Docker
-        run: gcloud auth configure-docker us-east1-docker.pkg.dev
+        run: |
+          gcloud auth configure-docker us-east1-docker.pkg.dev
 
       # Build and push the Docker image using regular Docker commands
       - name: Build and Push Without Buildx
         run: |
-          docker build -t us-east1-docker.pkg.dev/elegant-weaver-435322-v8/artifact-repo/cs1660-assignment3:latest .
-          docker push us-east1-docker.pkg.dev/elegant-weaver-435322-v8/artifact-repo/cs1660-assignment3:latest
+          docker build -t us-east1-docker.pkg.dev/elegant-weaver-435322-v8/artifact-repo/haydenw59/cs1660-assignment3 .
+          docker push us-east1-docker.pkg.dev/elegant-weaver-435322-v8/artifact-repo/haydenw59/cs1660-assignment3
 
 
 
